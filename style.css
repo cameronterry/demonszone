@@ -102,6 +102,25 @@ a img {
 	border: 0;
 }
 
+/**
+ * Clearfix by Nicolas Gallagher.
+ *
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
 /** DemonsZone Website CSS */
 
 body {
