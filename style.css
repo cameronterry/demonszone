@@ -1,0 +1,147 @@
+/*
+Theme Name: DemonsZone
+Theme URI: https://demonszone.com/
+Author: Cameron Terry
+Author URI: https://cameronterry.supernovawp.com/
+Description: DemonsZone
+Version: 5.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: demonszone
+*/
+
+/**
+ * Reset
+ *
+ * Resetting and rebuilding styles have been helped along thanks to the fine
+ * work of Eric Meyer, Nicolas Gallagher, Jonathan Neal, and Blueprint.
+ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 62.5%;
+	overflow-y: scroll;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+caption,
+th,
+td {
+	font-weight: normal;
+	text-align: left;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	quotes: none;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+a img {
+	border: 0;
+}
+
+/** DemonsZone Website CSS */
+
+body {
+	background:#0A0A0A;
+	color:#FFFFFF;
+	font-family:Merriweather, Georgia, 'Times New Roman', Times, serif;
+	font-size:16px;
+}
+
+body a {
+	border-bottom:1px dotted #000000;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+body p {
+	line-height:1.65;
+	margin:0.5em 0 1em 0;
+}
+
+body h1 {
+	font-size:2.6525em;
+}
+
+.demonszone {
+	margin:0 auto;
+	width:1280px;
+}
+
+.grid {
+	width:1280px;
+}
+
+.grid .article {
+	height:280px;
+	margin:10px;
+	overflow:hidden;
+	width:300px;
+}
+
+
+
+
