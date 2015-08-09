@@ -136,15 +136,6 @@ body a {
 	text-decoration:none;
 }
 
-body p {
-	line-height:1.65;
-	margin:0.5em 0 1em 0;
-}
-
-body h1 {
-	font-size:2.6525em;
-}
-
 .demonszone {
 	margin:0 auto;
 	width:1280px;
@@ -161,6 +152,40 @@ body h1 {
 	width:300px;
 }
 
+.single .article {
+	border:1px solid #3e3e3e;
+	float:left;
+	margin:0 10px 10px 10px;
+	padding:44px 49px 32px;
+	width:620px;
+}
 
+	.single .article h1 {
+		font-size:3.1265em;
+		letter-spacing:-2px;
+	}
 
+	.single .article img {
+		height:auto;
+		max-width:100%;
+	}
+
+	.single .article p {
+		line-height:1.65;
+		margin:0.5em 0 1em 0;
+	}
+
+	.single .article p.attribution {
+		color:#777777;
+		font-size:14px;
+		font-style:italic;
+		padding:0 0 3px 0;
+	}
+
+.single .col {
+	border:1px solid #3e3e3e;
+	float:left;
+	margin:0 10px 10px 10px;
+	width:300px;
+}
 
