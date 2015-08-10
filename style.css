@@ -266,6 +266,13 @@ body a {
 		width:300px;
 	}
 
+		.single .col .heading {
+			border:1px solid #3E3E3E;
+			font-size:1.85em;
+			margin:0 0 20px 0;
+			padding:25px;
+		}
+
 		.single .col .related-article {
 			margin:0 0 20px 0;
 		}
