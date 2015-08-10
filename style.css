@@ -194,6 +194,28 @@ body a {
 			width:300px;
 		}
 
+			.image-overlay a .overlay .details {
+				left:30px;
+				position:absolute;
+				right:30px;
+				text-align:center;
+				top:80px;
+			}
+
+				.image-overlay a .overlay .details h3 {
+					font-size:28px;
+				}
+
+				.image-overlay a .overlay .details p.artist {
+					color:#777777;
+					font-size:16px;
+					padding:0 0 20px 0;
+				}
+
+				.image-overlay a .overlay .details p.rating {
+					font-size:24px;
+				}
+
 		.image-overlay a:hover .overlay {
 			-webkit-transform:scale(1.0);
 			-moz-transform:scale(1.0);
