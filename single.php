@@ -2,6 +2,9 @@
 	<main class="single clearfix" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<article <?php post_class( 'article' ); ?>>
+				<?php if ( has_post_thumbnail() ) : ?>
+					<?php the_post_thumbnail( 'album-medium' ); ?>
+				<?php endif; ?>
 				<h1><?php the_title(); ?></h1>
 				<p class="attribution">
 					Posted on
