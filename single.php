@@ -19,7 +19,11 @@
 							<a href="<?php the_permalink(); ?>">
 								<div class="thumb"><?php the_post_thumbnail( 'album-small' ); ?></div>
 								<div class="overlay">
-									<?php the_title(); ?>
+									<div class="details">
+										<h3><?php the_title(); ?></h3>
+										<p class="artist"><?php dz_album_artist(); ?></p>
+										<p class="rating">10 / 10</p>
+									</div>
 								</div>
 							</a>
 						</article>
