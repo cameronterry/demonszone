@@ -15,7 +15,7 @@
 				<?php $related_albums = dz_get_related_albums(); ?>
 				<?php if ( $related_albums->have_posts() ) : ?>
 					<?php while ( $related_albums->have_posts() ) : $related_albums->the_post(); ?>
-						<article <?php post_class( 'image-overlay' ); ?>>
+						<article <?php post_class( array( 'related-article', 'image-overlay' ) ); ?>>
 							<a href="<?php the_permalink(); ?>">
 								<div class="thumb"><?php the_post_thumbnail( 'album-small' ); ?></div>
 								<div class="overlay">
