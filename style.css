@@ -152,6 +152,58 @@ body a {
 	width:300px;
 }
 
+.image-overlay {}
+
+	.image-overlay a {
+		height:300px;
+		position:relative;
+		width:300px;
+	}
+
+		.image-overlay a .thumb {
+			bottom:0px;
+			height:300px;
+			left:0px;
+			position:absolute;
+			right:0px;
+			top:0px;
+			width:300px;
+		}
+
+		.image-overlay a .overlay {
+			-webkit-transition:all .3s ease;
+			-moz-transition:all .3s ease;
+			-ms-transition:all .3s ease;
+			-o-transition:all .3s ease;
+
+			-webkit-transform:scale(0.9);
+			-moz-transform:scale(0.9);
+			-ms-transform:scale(0.9);
+			-o-transform:scale(0.9);
+
+			background:rgba( 0, 0, 0, 0.8 );
+			bottom:0px;
+			height:300px;
+			left:0px;
+			opacity:0;
+			position:absolute;
+			right:0px;
+			top:0px;
+			transform:scale(0.9);
+			transition:all .3s ease;
+			width:300px;
+		}
+
+		.image-overlay a:hover .overlay {
+			-webkit-transform:scale(1.0);
+			-moz-transform:scale(1.0);
+			-ms-transform:scale(1.0);
+			-o-transform:scale(1.0);
+
+			opacity:1;
+			transform:scale(1.0);
+		}
+
 .single .article {
 	border:1px solid #3e3e3e;
 	float:left;
