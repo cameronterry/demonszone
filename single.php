@@ -12,7 +12,20 @@
 				<?php the_content(); ?>
 			</article>
 			<aside class="col">
-				Hello world
+				<?php $related_albums = dz_get_related_albums(); ?>
+				<?php if ( $related_albums->have_posts() ) : ?>
+					<?php while ( $related_albums->have_posts() ) : $related_albums->the_post(); ?>
+						<article <?php post_class( 'image-overlay' ); ?>>
+							<a href="<?php the_permalink(); ?>">
+								<div class="thumb"><?php the_post_thumbnail( 'album-small' ); ?></div>
+								<div class="overlay">
+									<?php the_title(); ?>
+								</div>
+							</a>
+						</article>
+					<?php endwhile; ?>
+					<?php wp_reset_postdata(); ?>
+				<?php endif; ?>
 			</aside>
 			<aside class="col">
 				Hello world
