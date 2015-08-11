@@ -63,7 +63,9 @@ function dz_get_related_albums() {
 		$term_ids = wp_list_pluck( $artists, 'term_id' );
 
 		$query = new WP_Query( array(
+			'post__not_in' => array( get_the_ID() ),
 			'post_type' => 'albums',
+			'posts_per_page' => 5,
 			'tax_query' => array(
 				'taxonomy' => 'artist',
 				'terms' => $term_ids
