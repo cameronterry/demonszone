@@ -67,12 +67,11 @@ function dz_get_related_albums() {
 			'post_type' => 'albums',
 			'posts_per_page' => 5,
 			'tax_query' => array(
-				'taxonomy' => 'artist',
-				'terms' => $term_ids
+				array( 'taxonomy' => 'artist', 'terms' => $term_ids )
 			)
 		) );
 	}
-
+	
 	return $query;
 }
 
