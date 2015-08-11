@@ -13,7 +13,7 @@
 					<?php the_author_posts_link(); ?>
 				</p>
 				<?php the_content(); ?>
-				<h2>Tracklisting :</h2>
+				<h2>Track Listing :</h2>
 				<?php if ( have_rows( 'tracklisting' ) ) : ?>
 					<ol class="tracklisting">
 						<?php while ( have_rows( 'tracklisting' ) ) : the_row(); ?>
