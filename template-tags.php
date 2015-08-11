@@ -71,6 +71,29 @@ function dz_get_related_albums() {
 			)
 		) );
 	}
+
+	return $query;
+}
+
+function dz_get_albums_by_genres() {
+	$artists = get_the_terms( get_the_ID(), 'artist' );
+	$genres = get_the_terms( get_the_ID(), 'genres' );
+	$query = null;
+
+	if ( false === empty( $genres ) && false === is_wp_error( $genres ) ) {
+		$term_ids = wp_list_pluck( $genres, 'term_id' );
+		$term_artist_ids = wp_list_pluck( $artists, 'term_id' );
+
+		$query = new WP_Query( array(
+			'post_type' => 'albums',
+			'posts_per_page' => 5,
+			'tax_query' => array(
+				'relation' => 'AND',
+				array( 'taxonomy' => 'genres', 'terms' => $term_ids ),
+				array( 'taxonomy' => 'artist', 'terms' => $term_artist_ids, 'operator' => 'NOT IN' )
+			)
+		) );
+	}
 	
 	return $query;
 }
