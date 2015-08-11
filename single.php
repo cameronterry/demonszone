@@ -13,6 +13,14 @@
 					<?php the_author_posts_link(); ?>
 				</p>
 				<?php the_content(); ?>
+				<h2>Tracklisting :</h2>
+				<?php if ( have_rows( 'tracklisting' ) ) : ?>
+					<ol class="tracklisting">
+						<?php while ( have_rows( 'tracklisting' ) ) : the_row(); ?>
+							<li><?php the_sub_field( 'song_name' ); ?></li>
+						<?php endwhile; ?>
+					</ol>
+				<?php endif; ?>
 			</article>
 			<aside class="col">
 				<?php $related_albums = dz_get_related_albums(); ?>
