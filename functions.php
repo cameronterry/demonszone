@@ -5,6 +5,10 @@ define( 'DZ_VERSION', '5.0.0' );
 
 require_once( DZ_INC . '/template-tags.php' );
 
+if ( false === isset( $content_width ) ) {
+	$content_width = 520;
+}
+
 function dz_after_setup_theme() {
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
