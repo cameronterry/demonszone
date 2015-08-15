@@ -145,6 +145,11 @@ body a {
 	width:1280px;
 }
 
+	.demonszone p {
+		line-height:1.65;
+		margin:0.5em 0 1em 0;
+	}
+
 .main-content {
 	margin:0 0 40px 0;
 }
@@ -294,11 +299,6 @@ body a {
 				margin:0 0 5px 2.0em;
 			}
 
-		.single .article p {
-			line-height:1.65;
-			margin:0.5em 0 1em 0;
-		}
-
 		.single .article p.attribution {
 			color:#777777;
 			font-size:14px;
@@ -340,6 +340,18 @@ body a {
 			font-size:1.85em;
 			margin:0 0 20px 0;
 			padding:25px;
+		}
+
+		.single .col .heading-container {
+			border-bottom:1px solid #3E3E3E;
+			border-left:1px solid #3E3E3E;
+			border-right:1px solid #3E3E3E;
+			margin:0 0 20px 0;
+			padding:25px;
+		}
+
+		.single .col .heading-with-container {
+			margin:0;
 		}
 
 		.single .col .related-article {

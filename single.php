@@ -32,8 +32,13 @@
 				<?php endif; ?>
 			</article>
 
-			<?php if ( $related_albums->have_posts() ) : ?>
-				<aside class="col">
+			<aside class="col">
+				<h2 class="heading heading-with-container">Album Details</h2>
+				<div class="heading-container">
+					<p><?php the_terms( get_the_ID(), 'artist', 'Artist : ', ', ' ); ?></p>
+					<p><?php the_terms( get_the_ID(), 'genres', 'Genres : ', ', ' ); ?></p>
+				</div>
+				<?php if ( $related_albums->have_posts() ) : ?>
 					<h2 class="heading">Related Albums:</h2>
 					<?php while ( $related_albums->have_posts() ) : $related_albums->the_post(); ?>
 						<article <?php post_class( array( 'related-article', 'image-overlay' ) ); ?>>
@@ -50,8 +55,8 @@
 						</article>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
-				</aside>
-			<?php endif; ?>
+				<?php endif; ?>
+			</aside>
 
 			<?php if ( $albums_by_genres->have_posts() ) : ?>
 				<aside class="col">
