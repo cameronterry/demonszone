@@ -1,18 +1,27 @@
 <?php get_header(); ?>
-	<main class="single clearfix" role="main">
+	<main class="main-content single clearfix" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
+			<?php
+
+				/** Preparation for Article Elements. */
+				$related_albums = dz_get_related_albums();
+				$albums_by_genres = dz_get_albums_by_genres();
+
+
+			?>
 			<article <?php post_class( 'article' ); ?>>
 				<?php if ( has_post_thumbnail() ) : ?>
-					<?php the_post_thumbnail( 'album-medium' ); ?>
+					<div class="thumbnail"><?php the_post_thumbnail( 'album-medium' ); ?></div>
 				<?php endif; ?>
 				<h1><?php the_title(); ?></h1>
 				<p class="attribution">
-					Posted on
-					<time><?php the_date(); ?></time>
-					by
-					<?php the_author_posts_link(); ?>
+					Posted on <time><?php the_date(); ?></time>
+					by <?php the_author_posts_link(); ?>
 				</p>
-				<?php the_content(); ?>
+				<div class="copy">
+					<?php the_content(); ?>
+				</div>
+				<p class="rating"><?php dz_album_rating(); ?></p>
 				<h2>Track Listing :</h2>
 				<?php if ( have_rows( 'tracklisting' ) ) : ?>
 					<ol class="tracklisting">
@@ -22,9 +31,9 @@
 					</ol>
 				<?php endif; ?>
 			</article>
-			<aside class="col">
-				<?php $related_albums = dz_get_related_albums(); ?>
-				<?php if ( $related_albums->have_posts() ) : ?>
+
+			<?php if ( $related_albums->have_posts() ) : ?>
+				<aside class="col">
 					<h2 class="heading">Related Albums:</h2>
 					<?php while ( $related_albums->have_posts() ) : $related_albums->the_post(); ?>
 						<article <?php post_class( array( 'related-article', 'image-overlay' ) ); ?>>
@@ -34,18 +43,18 @@
 									<div class="details">
 										<h3><?php the_title(); ?></h3>
 										<p class="artist"><?php dz_album_artist(); ?></p>
-										<p class="rating">10 / 10</p>
+										<p class="rating"><?php dz_album_rating( '' ); ?></p>
 									</div>
 								</div>
 							</a>
 						</article>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
-				<?php endif; ?>
-			</aside>
-			<aside class="col">
-				<?php $albums_by_genres = dz_get_albums_by_genres(); ?>
-				<?php if ( $albums_by_genres->have_posts() ) : ?>
+				</aside>
+			<?php endif; ?>
+
+			<?php if ( $albums_by_genres->have_posts() ) : ?>
+				<aside class="col">
 					<h2 class="heading">More Albums:</h2>
 					<?php while ( $albums_by_genres->have_posts() ) : $albums_by_genres->the_post(); ?>
 						<article <?php post_class( array( 'related-article', 'image-overlay' ) ); ?>>
@@ -55,15 +64,15 @@
 									<div class="details">
 										<h3><?php the_title(); ?></h3>
 										<p class="artist"><?php dz_album_artist(); ?></p>
-										<p class="rating">10 / 10</p>
+										<p class="rating"><?php dz_album_rating( '' ); ?></p>
 									</div>
 								</div>
 							</a>
 						</article>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
-				<?php endif; ?>
-			</aside>
+				</aside>
+			<?php endif; ?>
 		<?php endwhile; ?>
 	</main>
 <?php get_footer(); ?>
