@@ -37,6 +37,7 @@
 				<div class="heading-container">
 					<p><?php the_terms( get_the_ID(), 'artist', 'Artist : ', ', ' ); ?></p>
 					<p><?php the_terms( get_the_ID(), 'genres', 'Genres : ', ', ' ); ?></p>
+					<p>Release Date : <?php dz_album_release_date(); ?></p>
 				</div>
 				<?php if ( $related_albums->have_posts() ) : ?>
 					<h2 class="heading">Related Albums:</h2>
