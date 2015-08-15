@@ -21,9 +21,24 @@
 				<div class="copy">
 					<?php the_content(); ?>
 				</div>
+				<p class="rating"><?php dz_album_rating(); ?></p>
+				<h2>Track Listing :</h2>
+				<?php if ( have_rows( 'tracklisting' ) ) : ?>
+					<ol class="tracklisting">
+						<?php while ( have_rows( 'tracklisting' ) ) : the_row(); ?>
+							<li><?php the_sub_field( 'song_name' ); ?></li>
+						<?php endwhile; ?>
+					</ol>
+				<?php endif; ?>
 			</article>
 
 			<aside class="col">
+				<h2 class="heading heading-with-container">Album Details</h2>
+				<div class="heading-container">
+					<p><?php the_terms( get_the_ID(), 'artist', 'Artist : ', ', ' ); ?></p>
+					<p><?php the_terms( get_the_ID(), 'genres', 'Genres : ', ', ' ); ?></p>
+					<p>Release Date : <?php dz_album_release_date(); ?></p>
+				</div>
 				<?php if ( $related_albums->have_posts() ) : ?>
 					<h2 class="heading">Related Albums:</h2>
 					<?php while ( $related_albums->have_posts() ) : $related_albums->the_post(); ?>
