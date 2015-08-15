@@ -121,6 +121,10 @@ a img {
     *zoom: 1;
 }
 
+.padding {
+	padding:0 10px;
+}
+
 /** DemonsZone Website CSS */
 
 body {
@@ -141,17 +145,40 @@ body a {
 	width:1280px;
 }
 
+.main-content {
+	margin:0 0 40px 0;
+}
+
+.footer {
+	background:#FFFFFF;
+	color:#666666;
+	padding:41px 25px;
+	text-align:center;
+	width:100%;
+}
+
+	.footer a {
+		border-bottom-color:#666666;
+		color:#000000;
+	}
+
+/**
+ * Grid
+ */
 .grid {
 	width:1280px;
 }
 
-.grid .article {
-	height:280px;
-	margin:10px;
-	overflow:hidden;
-	width:300px;
-}
+	.grid .article {
+		height:280px;
+		margin:10px;
+		overflow:hidden;
+		width:300px;
+	}
 
+/**
+ * Image Overlay
+ */
 .image-overlay {
 	height:300px;
 }
