@@ -174,8 +174,9 @@ body a {
 	width:1280px;
 }
 
-	.grid .article {
-		height:280px;
+	.grid .albums {
+		float:left;
+		height:300px;
 		margin:10px;
 		overflow:hidden;
 		width:300px;
@@ -189,10 +190,20 @@ body a {
 }
 
 	.image-overlay a {
+		display:block;
 		height:300px;
 		position:relative;
 		width:300px;
 	}
+
+		.image-overlay a .just-added {
+			background:rgba( 0, 75, 0, 0.8 );
+			bottom:-1px;
+			padding:4px;
+			position:absolute;
+			text-align:center;
+			width:100%;
+		}
 
 		.image-overlay a .thumb {
 			bottom:0px;
