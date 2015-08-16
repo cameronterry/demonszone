@@ -1,11 +1,21 @@
 <?php
 
+global $today; $today = new DateTime();
+
 function dz_album_artist() {
     dz_the_term( 'artist' );
 }
 
 function dz_album_artist_permalink() {
 	dz_the_term( 'artist', '<a href="%2$s">%1$s</a>' );
+}
+
+function dz_album_is_recent() {
+	global $today;
+
+	$article_date = date_create( get_the_date() );
+	$interval = date_diff( $article_date, $today );
+	return ( 7 >= intval( $interval->format( '%a' ) ) );
 }
 
 function dz_album_rating( $prefix = 'Rating : ', $sep = ' / ' ) {
