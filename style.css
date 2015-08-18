@@ -150,14 +150,6 @@ body a {
 		margin:0.5em 0 1em 0;
 	}
 
-.home .main-content h2 {
-	border-bottom:1px solid #3e3e3e;
-	border-top:1px solid #3e3e3e;
-	font-size:3.1265em;
-	letter-spacing:-2px;
-	padding:10px 0 0 0;
-}
-
 .main-content {
 	margin:0 0 40px 0;
 }
@@ -189,6 +181,56 @@ body a {
 		overflow:hidden;
 		width:300px;
 	}
+
+/** Homepage Style */
+.home .main-content h2 {
+	border-bottom:1px solid #3e3e3e;
+	border-top:1px solid #3e3e3e;
+	font-size:3.1265em;
+	letter-spacing:-2px;
+	padding:10px 0 0 0;
+}
+
+.home .main-content .news {}
+
+	.home .main-content .news .article {
+		border-bottom:1px solid #3e3e3e;
+		float:left;
+		height:50px;
+		margin:0 10px;
+		padding:10px;
+		width:610px;
+	}
+
+		.home .main-content .news .article h4 a {
+			font-size:1.375em;
+		}
+
+	.home .main-content .news .article.first {
+		margin-top:10px;
+	}
+
+	.home .main-content .news .feature {
+		float:left;
+		margin:10px;
+		position:relative;
+		width:620px;
+	}
+
+		.home .main-content .news .feature a {
+			border-bottom:none;
+		}
+
+		.home .main-content .news .feature h3 {
+			background:rgba( 0, 0, 0, 0.6 );
+			bottom:0px;
+			color:#FFFFFF;
+			display:block;
+			font-size:1.765em;
+			padding:10px;
+			position:absolute;
+			width:100%;
+		}
 
 /**
  * Image Overlay
