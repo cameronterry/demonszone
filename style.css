@@ -150,6 +150,14 @@ body a {
 		margin:0.5em 0 1em 0;
 	}
 
+.home .main-content h2 {
+	border-bottom:1px solid #3e3e3e;
+	border-top:1px solid #3e3e3e;
+	font-size:3.1265em;
+	letter-spacing:-2px;
+	padding:10px 0 0 0;
+}
+
 .main-content {
 	margin:0 0 40px 0;
 }
