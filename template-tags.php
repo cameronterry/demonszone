@@ -95,6 +95,7 @@ function dz_get_albums_by_genres() {
 		$term_artist_ids = wp_list_pluck( $artists, 'term_id' );
 
 		$query = new WP_Query( array(
+			'orderby' => 'rand',
 			'post_type' => 'albums',
 			'posts_per_page' => 5,
 			'tax_query' => array(
