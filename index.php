@@ -14,11 +14,11 @@
 					<?php endif; ?>
 					<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				</article>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<article <?php post_class( array( 'article', ( $first ? 'first' : '' ) ) ); ?>>
+				<?php for ( $i = 0 ; $i < 7; ++$i ) : the_post(); ?>
+					<article <?php post_class( array( 'article', ( 0 === $i ? 'first' : '' ) ) ); ?>>
 						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 					</article>
-				<?php $first = false; endwhile; ?>
+				<?php endfor; ?>
 			<?php endif; ?>
 		</section>
 		<?php if ( is_front_page() ) : ?>
