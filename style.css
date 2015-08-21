@@ -193,44 +193,84 @@ body a {
 
 .home .main-content .news {}
 
-	.home .main-content .news .article {
-		border-bottom:1px solid #3e3e3e;
-		float:left;
-		height:50px;
-		margin:0 10px;
-		padding:10px;
-		width:610px;
+	.home .main-content .news h3 {
+		border-top:1px solid #3e3e3e;
+		font-size:1.4675em;
+		padding:10px 0;
+		text-align:center;
 	}
 
-		.home .main-content .news .article h4 a {
-			font-size:1.375em;
-		}
+	.home .main-content .news .main {}
 
-	.home .main-content .news .article.first {
-		margin-top:10px;
-	}
-
-	.home .main-content .news .feature {
-		float:left;
-		margin:10px;
-		position:relative;
-		width:620px;
-	}
-
-		.home .main-content .news .feature a {
-			border-bottom:none;
-		}
-
-		.home .main-content .news .feature h3 {
-			background:rgba( 0, 0, 0, 0.6 );
-			bottom:0px;
-			color:#FFFFFF;
-			display:block;
-			font-size:1.765em;
+		.home .main-content .news .main .article {
+			border-bottom:1px solid #3e3e3e;
+			float:left;
+			height:50px;
+			margin:0 10px;
 			padding:10px;
-			position:absolute;
-			width:100%;
+			width:610px;
 		}
+
+			.home .main-content .news .main .article h4 a {
+				font-size:1.375em;
+			}
+
+		.home .main-content .news .main .article.first {
+			margin-top:10px;
+		}
+
+		.home .main-content .news .main .feature {
+			float:left;
+			margin:10px;
+			position:relative;
+			width:620px;
+		}
+
+			.home .main-content .news .main .feature a {
+				border-bottom:none;
+			}
+
+			.home .main-content .news .main .feature h3 {
+				background:rgba( 0, 0, 0, 0.6 );
+				bottom:0px;
+				color:#FFFFFF;
+				display:block;
+				font-size:1.765em;
+				padding:10px;
+				position:absolute;
+				width:100%;
+			}
+
+		.home .main-content .news .sub {
+			border-top:1px solid #3e3e3e;
+		}
+
+			.home .main-content .news .sub .article {
+				float:left;
+				height:114px;
+				margin:0 10px;
+				padding:10px;
+				width:620px;
+			}
+
+				.home .main-content .news .sub .article h4 {
+					font-size:1.257em;
+				}
+
+				.home .main-content .news .sub .article .byline {
+					color:#777777;
+					font-style:italic;
+				}
+
+				.home .main-content .news .sub .article .thumbnail {
+					border:none;
+					float:left;
+					padding:0 20px 0 0;
+				}
+
+					.home .main-content .news .sub .article .thumbnail a {
+						text-decoration:none;
+					}
 
 /**
  * Image Overlay
