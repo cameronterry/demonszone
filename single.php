@@ -10,8 +10,9 @@
 
 			?>
 			<article <?php post_class( 'article' ); ?>>
+				<p class="category"><?php the_category( ',' ); ?></p>
 				<?php if ( has_post_thumbnail() && empty( get_video_thumbnail() ) ) : ?>
-					<div class="thumbnail"><?php the_post_thumbnail( 'album-medium' ); ?></div>
+					<div class="thumbnail"><?php the_post_thumbnail( 'news-thumb-large' ); ?></div>
 				<?php endif; ?>
 				<h1><?php the_title(); ?></h1>
 				<p class="attribution">
