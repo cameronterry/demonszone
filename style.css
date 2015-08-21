@@ -374,10 +374,6 @@ body a {
 		width:620px;
 	}
 
-	.single .article.type-post {
-		width:940px;
-	}
-
 		.single .article h1 {
 			font-size:3.1265em;
 			letter-spacing:-2px;
@@ -403,6 +399,11 @@ body a {
 			.single .article ol li {
 				margin:0 0 5px 2.0em;
 			}
+
+		.single .article strong {
+			font-weight:bold;
+			text-transform:uppercase;
+		}
 
 		.single .article p.attribution {
 			color:#777777;
@@ -433,6 +434,10 @@ body a {
 			padding:0 4px;
 			text-align:right;
 		}
+
+	.single .article.type-post {
+		width:940px;
+	}
 
 	.single .col {
 		float:left;
