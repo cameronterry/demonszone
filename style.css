@@ -374,6 +374,10 @@ body a {
 		width:620px;
 	}
 
+	.single .article.type-post {
+		width:940px;
+	}
+
 		.single .article h1 {
 			font-size:3.1265em;
 			letter-spacing:-2px;

@@ -27,6 +27,12 @@ function dz_after_setup_theme() {
 add_action( 'after_setup_theme', 'dz_after_setup_theme' );
 
 function dz_enqueue_scripts() {
+	global $content_width;
+
+	if ( is_singular( 'post' ) ) {
+		$content_width = 840;
+	}
+
 	wp_enqueue_style( 'dz-fonts', '//fonts.googleapis.com/css?family=Merriweather%3A300%2C400%2C700' );
 	wp_enqueue_style( 'dz-style', get_stylesheet_uri(), array( 'dz-fonts' ), DZ_VERSION );
 }
