@@ -18,6 +18,7 @@ function dz_after_setup_theme() {
 	add_image_size( 'album-medium', 520, 520, true );
 
 	/** News Image Sizes */
+	add_image_size( 'news-thumb-tiny', 150, 84, true );
 	add_image_size( 'news-thumb', 300, 169, true );
 
 	/** Homepage Image Sizes */
