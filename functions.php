@@ -36,12 +36,18 @@ function dz_enqueue_scripts() {
 
 	wp_enqueue_style( 'dz-fonts', '//fonts.googleapis.com/css?family=Merriweather%3A300%2C400%2C700' );
 	wp_enqueue_style( 'dz-style', get_stylesheet_uri(), array( 'dz-fonts' ), DZ_VERSION );
+
+	wp_enqueue_script( 'dz', get_stylesheet_directory_uri() . '/assets/js/dz.js', array( 'jquery' ), DZ_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'dz_enqueue_scripts' );
 
 function dz_pre_get_posts( $query ) {
 	if ( $query->is_home() && $query->is_main_query() ) {
 		$query->set( 'posts_per_page', 18 );
+	}
+
+	if ( is_tax( 'genres' ) && $query->is_main_query() ) {
+		$query->set( 'posts_per_page', 20 );	
 	}
 }
 add_action( 'pre_get_posts', 'dz_pre_get_posts' );
