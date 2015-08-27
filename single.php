@@ -5,8 +5,6 @@
 
 				/** Preparation for Article Elements. */
 				$related_albums = dz_get_related_albums();
-				$albums_by_genres = dz_get_albums_by_genres();
-
 
 			?>
 			<article <?php post_class( 'article' ); ?>>
