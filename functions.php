@@ -24,6 +24,8 @@ function dz_after_setup_theme() {
 
 	/** Homepage Image Sizes */
 	add_image_size( 'homepage-feature', 620, 349, true );
+
+	register_nav_menu( 'primary', __( 'Primary Menu', 'demonszone' ) );
 }
 add_action( 'after_setup_theme', 'dz_after_setup_theme' );
 
@@ -34,10 +36,12 @@ function dz_enqueue_scripts() {
 		$content_width = 840;
 	}
 
+	wp_enqueue_style( 'slidebars', get_stylesheet_directory_uri() . '/assets/css/slidebars.min.css', null, DZ_VERSION );
 	wp_enqueue_style( 'dz-fonts', '//fonts.googleapis.com/css?family=Merriweather%3A300%2C400%2C700' );
-	wp_enqueue_style( 'dz-style', get_stylesheet_uri(), array( 'dz-fonts' ), DZ_VERSION );
+	wp_enqueue_style( 'dz-style', get_stylesheet_uri(), array( 'dashicons', 'dz-fonts', 'slidebars' ), DZ_VERSION );
 
-	wp_enqueue_script( 'dz', get_stylesheet_directory_uri() . '/assets/js/dz.js', array( 'jquery' ), DZ_VERSION, true );
+	wp_enqueue_script( 'slidebars', get_stylesheet_directory_uri() . '/assets/js/slidebars.min.js', array( 'jquery' ), DZ_VERSION, true );
+	wp_enqueue_script( 'dz', get_stylesheet_directory_uri() . '/assets/js/dz.js', array( 'jquery', 'slidebars' ), DZ_VERSION, true );
 }
 add_action( 'wp_enqueue_scripts', 'dz_enqueue_scripts' );
 

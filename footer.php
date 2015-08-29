@@ -1,4 +1,8 @@
+		</div>
 	</div>
+	<div class="sb-slidebar sb-left sb-style-push">
+    	<p>Hello world</p>
+    </div>
 	<footer class="footer">
 		<p>Copyright DemonsZone <?php echo( date( 'Y' ) ); ?>, All Rights Reserved<span class="padding"></span><a href="mailto:hello@demonszone.com">hello@demonszone.com</a></p>
 	</footer>
