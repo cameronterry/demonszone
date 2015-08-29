@@ -159,6 +159,35 @@ body {
 		margin:0.5em 0 1em 0;
 	}
 
+	.main-content iframe {
+		margin:0 0 20px 0;
+	}
+
+/**
+ * MAIN NAVIGATION
+ */
+.main-navigation {
+	background-color:#3c3f41;
+}
+
+	.main-navigation .menu-item {}
+
+		.main-navigation .menu-item a {
+			color:#FFFFFF;
+			display:block;
+			padding:8px 20px;
+			text-decoration:none;
+		}
+
+		.main-navigation .menu-item a:hover {
+			background-color:#1d1d1d;
+		}
+
+.admin-bar .main-navigation {
+	margin:32px 0 0 0;
+	padding:20px 0 0 0;
+}
+
 .navigation {}
 
 	.navigation a.dashicons {
