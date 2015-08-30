@@ -168,6 +168,7 @@ body {
  */
 .main-navigation {
 	background-color:#3c3f41;
+	padding:20px 0 0 0;
 }
 
 	.main-navigation .menu-item {}
@@ -183,18 +184,53 @@ body {
 			background-color:#1d1d1d;
 		}
 
+		.main-navigation .logo {
+			font-size:7.0em;
+			margin:0 20px;
+			padding:20px 0 0 0;
+			text-align:center;
+		}
+
+			.main-navigation .logo a {
+				color:#FFFFFF;
+				text-decoration:none;
+			}
+
+		.main-navigation .search-form {
+			margin:0 20px 10px 20px;
+		}
+
+			.main-navigation .search-form .search-box {
+				font-size:1.0em;
+			    line-height:1.8em;
+			    padding:0 5px;
+			    width:100%;
+			}
+
 .admin-bar .main-navigation {
 	margin:32px 0 0 0;
-	padding:20px 0 0 0;
 }
 
 .navigation {}
 
 	.navigation a.dashicons {
 		color:#FFFFFF;
-		font-size:2.0em;
-		height:30px;
+		font-size:3.0em;
+		height:46px;
+		width:52px;
 	}
+
+	.navigation .site-name {
+		display:inline;
+		font-size:2.0em;
+		line-height:48px;
+		margin:0 0 10px 0;
+	}
+
+		.navigation .site-name a {
+			color:#FFFFFF;
+			text-decoration:none;
+		}
 
 .footer {
 	background:#FFFFFF;

@@ -3,6 +3,7 @@
 define( 'DZ_INC', get_template_directory() );
 define( 'DZ_VERSION', '5.0.0' );
 
+require_once( DZ_INC . '/inc/jetpack.php' );
 require_once( DZ_INC . '/template-tags.php' );
 
 if ( false === isset( $content_width ) ) {
@@ -11,8 +12,16 @@ if ( false === isset( $content_width ) ) {
 
 function dz_after_setup_theme() {
 	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'post-formats' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'html5' );
+
+	/** Jetpack Infinity Scroll */
+	add_theme_support( 'infinite-scroll', array(
+	    'container' => 'content',
+	    'footer' => 'page',
+	    'render' => 'dz_infinity_scroll'
+	) );
 
 	add_image_size( 'album-small', 300, 300, true );
 	add_image_size( 'album-medium', 520, 520, true );
