@@ -20,6 +20,7 @@ function dz_after_setup_theme() {
 	add_theme_support( 'infinite-scroll', array(
 	    'container' => 'content',
 	    'footer' => 'page',
+	    'posts_per_page' => 20,
 	    'render' => 'dz_infinity_scroll'
 	) );
 
