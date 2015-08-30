@@ -1,6 +1,14 @@
 		</div>
 	</div>
-    <?php wp_nav_menu( array( 'container_class' => 'sb-slidebar sb-left sb-style-push main-navigation', 'menu' => 'primary' ) ); ?>
+	<div class="sb-slidebar sb-left sb-style-push main-navigation">
+		<div class="logo">
+			<a href="<?php echo( home_url( '/' ) ); ?>">DZ</a>
+		</div>
+		<form action="<?php echo( home_url( '/' ) ); ?>" class="search-form" method="get">
+			<input id="s" name="s" class="search-box" placeholder="Search..." type="text" value="" />
+		</form>
+    	<?php wp_nav_menu( array( 'menu' => 'primary' ) ); ?>
+    </div>
 	<footer class="footer">
 		<p>Copyright DemonsZone <?php echo( date( 'Y' ) ); ?>, All Rights Reserved<span class="padding"></span><a href="mailto:hello@demonszone.com">hello@demonszone.com</a></p>
 	</footer>

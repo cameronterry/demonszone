@@ -15,6 +15,9 @@
 				<nav class="navigation">
 		            <div class="sb-toggle-left navbar-left">
 						<a class="dashicons dashicons-menu" href="#"></a>
+						<h1 class="site-name">
+							<a href="<?php echo( home_url( '/' ) ); ?>"><?php echo( get_bloginfo( 'name' ) ); ?></a>
+						</h1>
 					</div>
 		        </nav>
 			</header>
