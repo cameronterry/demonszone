@@ -5,6 +5,8 @@ function dz_infinity_scroll() {
 		the_post();
 		get_template_part( 'content', get_post_format() );
 	}
+
+	echo( '<div class="clearfix"></div>' );
 }
 
 function dz_infinite_scroll_archive_supported() {
