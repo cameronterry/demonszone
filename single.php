@@ -27,18 +27,7 @@
 				<?php if ( $related_albums->have_posts() ) : ?>
 					<h2 class="heading">Related Albums:</h2>
 					<?php while ( $related_albums->have_posts() ) : $related_albums->the_post(); ?>
-						<article <?php post_class( array( 'related-article', 'image-overlay' ) ); ?>>
-							<a href="<?php the_permalink(); ?>">
-								<div class="thumb"><?php the_post_thumbnail( 'album-small' ); ?></div>
-								<div class="overlay">
-									<div class="details">
-										<h3><?php the_title(); ?></h3>
-										<p class="artist"><?php dz_album_artist(); ?></p>
-										<p class="rating"><?php dz_album_rating( '' ); ?></p>
-									</div>
-								</div>
-							</a>
-						</article>
+						<?php get_template_part( 'content', 'albums' ); ?>
 					<?php endwhile; ?>
 					<?php wp_reset_postdata(); ?>
 				<?php endif; ?>
