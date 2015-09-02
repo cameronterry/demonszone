@@ -37,7 +37,7 @@
 		</section>
 		<?php if ( is_front_page() ) : ?>
 			<section class="albums clearfix">
-				<h2>Album Reviews</h2>
+				<h2><a href="<?php echo( get_post_type_archive_link( 'albums' ) ); ?>">Album Reviews</a></h2>
 				<div class="grid">
 					<?php $albums = new WP_Query( array( 'post_type' => 'albums', 'posts_per_page' => 16 ) ); ?>
 					<?php while ( $albums->have_posts() ) : $albums->the_post(); ?>

@@ -270,6 +270,10 @@ body {
 	padding:10px 0 0 0;
 }
 
+	.home .main-content h2 a {
+		border-bottom:none;
+	}
+
 .home .main-content .news {}
 
 	.home .main-content .news h3 {
