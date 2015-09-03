@@ -220,7 +220,7 @@ h1 {
 
 	.navigation a.dashicons {
 		color:#FFFFFF;
-		font-size:3.0em;
+		font-size:48px;
 		height:46px;
 		width:52px;
 	}
@@ -483,7 +483,7 @@ h1 {
 		}
 
 		.main-content.all-listing .article p {
-			font-size:20px;
+			font-size:1.25em;
 		}
 
 		.main-content.all-listing .article p.attribution {
@@ -632,6 +632,26 @@ h1 {
 		float:none;
 		margin:10px 0 10px 0;
 	}
+
+	.main-content.all-listing {
+		border:none;
+		margin:0;
+		padding:0;
+		width:300px;
+	}
+
+		.main-content.all-listing .article h2 {
+			font-size:2.0em;
+		}
+
+		.main-content.all-listing .article p.attribution {
+			display:none;
+		}
+
+		.main-content.all-listing .article .thumbnail {
+			float:none;
+			padding:10px 0;
+		}
 
 	.home .main-content .news .main .article {
 		float:none;
