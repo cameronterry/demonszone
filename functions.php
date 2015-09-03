@@ -4,7 +4,7 @@ define( 'DZ_INC', get_template_directory() );
 define( 'DZ_VERSION', '5.0.0' );
 
 require_once( DZ_INC . '/inc/jetpack.php' );
-require_once( DZ_INC . '/template-tags.php' );
+require_once( DZ_INC . '/inc/template-tags.php' );
 
 if ( false === isset( $content_width ) ) {
 	$content_width = 520;
