@@ -3,7 +3,13 @@
 function dz_infinity_scroll() {
 	while( have_posts() ) {
 		the_post();
-		get_template_part( 'content', get_post_format() );
+
+		if ( is_tax( 'genres' ) ) {
+			get_template_part( 'content', get_post_format() );
+		}
+		else {
+			get_template_part( 'listing', get_post_type() );
+		}
 	}
 
 	echo( '<div class="clearfix"></div>' );
