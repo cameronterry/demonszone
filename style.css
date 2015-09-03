@@ -622,3 +622,61 @@ h1 {
 			margin:0 0 20px 0;
 		}
 
+@media screen and (max-width: 400px) {
+	.demonszone {
+		font-size:13px;
+		width:300px;
+	}
+
+	.grid .albums {
+		float:none;
+		margin:10px 0 10px 0;
+	}
+
+	.home .main-content .news .main .article {
+		float:none;
+		height:auto;
+		margin:0 0 10px 0;
+		padding:0 0 5px 0;
+		width:300px;
+	}
+
+		.home .main-content .news .main .article h4 a {
+			border-bottom:none;
+		}
+
+	.home .main-content .news .main .feature {
+		float:none;
+		margin:0;
+		width:300px;
+	}
+
+		.home .main-content .news .main .feature a img {
+			height:auto;
+			width:300px;
+		}
+
+	.home .main-content .news .sub {
+		padding:10px 0 0 0;
+	}
+
+		.home .main-content .news .sub .article {
+			float:none;
+			height:auto;
+			margin:0 0 10px 0;
+			padding:0;
+			width:300px;
+		}
+
+			.home .main-content .news .sub .article h4 a {
+				border-bottom:none;
+			}
+
+			.home .main-content .news .sub .article .byline {
+				display:none;
+			}
+
+			.home .main-content .news .sub .article .thumbnail {
+				padding:0 10px 0 0;
+			}
+}
