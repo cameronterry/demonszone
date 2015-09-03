@@ -679,4 +679,28 @@ h1 {
 			.home .main-content .news .sub .article .thumbnail {
 				padding:0 10px 0 0;
 			}
+
+	.main-content {
+		margin:0;
+	}
+
+		.main-content p {
+			font-size:1.25em;
+		}
+
+	.single .article.type-post {
+		width:300px;
+	}
+
+	.single .article {
+		border:none;
+		float:none;
+		margin:0;
+		padding:0;
+		width:300px;
+	}
+
+	.single .col {
+		margin:0;
+	}
 }
