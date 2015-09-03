@@ -55,6 +55,11 @@ function dz_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'dz_enqueue_scripts' );
 
+function dz_excerpt_length() {
+	return 20;
+}
+add_filter( 'excerpt_length', 'dz_excerpt_length', 999 );
+
 function dz_pre_get_posts( $query ) {
 	if ( $query->is_home() && $query->is_main_query() ) {
 		$query->set( 'posts_per_page', 18 );
