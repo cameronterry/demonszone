@@ -4,5 +4,6 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'listing', get_post_type() ); ?>
 		<?php endwhile; ?>
+		<div id="content"></div>
 	</main>
 <?php get_footer(); ?>
