@@ -61,6 +61,25 @@ function dz_the_term( $taxonomy = 'category', $pattern = null ) {
     }
 }
 
+function dz_the_archive_title() {
+	$taxonomy = get_taxonomy( get_query_var( 'taxonomy' ) );
+	$section = 'Section';
+
+	if ( false === empty( $taxonomy ) ) {
+		$section = $taxonomy->labels->name;
+	}
+
+	if ( is_category() ) {
+		$section = 'Category';
+	}
+
+	if ( is_tag() ) {
+		$section = 'Tag';
+	}
+
+	printf( '%1$s : %2$s', $section, single_term_title( '', false ) );
+}
+
 /**
  * Takes the Artists associated with the Post and then
  * finds Albums.
