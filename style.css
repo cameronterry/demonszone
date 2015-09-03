@@ -449,6 +449,46 @@ body {
 		}
 
 /**
+ * All Listings CSS
+ */
+.main-content.all-listing {
+	border:1px solid #3e3e3e;
+	margin:0 10px 10px 10px;
+	padding:44px 49px 32px;
+}
+
+	.main-content.all-listing h1 {
+		border-bottom:1px solid #3e3e3e;
+		font-size:3.0em;
+		font-weight:bold;
+		margin:0 0 30px 0;
+	}
+
+	.main-content.all-listing .article {
+		border-bottom:1px solid #3e3e3e;
+		margin:0 0 30px 0;
+	}
+
+		.main-content.all-listing .article h2 {
+			font-size:3.0em;
+			font-weight:bold;
+		}
+
+		.main-content.all-listing .article p {
+			font-size:20px;
+		}
+
+		.main-content.all-listing .article p.attribution {
+			color:#777777;
+			font-size:14px;
+		}
+
+		.main-content.all-listing .article .thumbnail {
+			float:left;
+			padding:10px 10px 10px 0;
+		}
+
+/**
  * Article
  */
 .single {}
