@@ -4,7 +4,7 @@
 			<?php
 
 				/** Preparation for Article Elements. */
-				$related_albums = dz_get_related_albums();
+				$related_albums = dz_get_related_albums( true );
 				$albums_by_genres = dz_get_albums_by_genres();
 
 
