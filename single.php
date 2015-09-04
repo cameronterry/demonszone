@@ -24,7 +24,7 @@
 			</article>
 
 			<aside class="col">
-				<?php if ( $related_albums->have_posts() ) : ?>
+				<?php if ( false === empty( $related_albums ) && $related_albums->have_posts() ) : ?>
 					<h2 class="heading">Related Albums:</h2>
 					<?php while ( $related_albums->have_posts() ) : $related_albums->the_post(); ?>
 						<?php get_template_part( 'content', 'albums' ); ?>
