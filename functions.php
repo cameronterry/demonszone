@@ -62,6 +62,16 @@ function dz_excerpt_length() {
 }
 add_filter( 'excerpt_length', 'dz_excerpt_length', 999 );
 
+function dz_oembed_wrapper( $html, $url, $attr, $post_ID ) {
+	return sprintf( '<p class="oembed-wrapper">%1$s</p>', $html );
+}
+add_filter( 'embed_oembed_html', 'dz_oembed_wrapper', 10, 4 );
+
+function dz_oembed_wrapper2( $return, $url, $attr ) {
+	return sprintf( '<p class="oembed-wrapper">%1$s</p>', $return );
+}
+add_filter( 'embed_handler_html', 'dz_oembed_wrapper2', 10, 3 );
+
 function dz_pre_get_posts( $query ) {
 	if ( $query->is_home() && $query->is_main_query() ) {
 		$query->set( 'posts_per_page', 18 );
