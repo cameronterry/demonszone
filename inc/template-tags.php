@@ -84,21 +84,27 @@ function dz_the_archive_title() {
  * Takes the Artists associated with the Post and then
  * finds Albums.
  */
-function dz_get_related_albums() {
+function dz_get_related_albums( $randomise = false ) {
 	$artists = get_the_terms( get_the_ID(), 'artist' );
 	$query = null;
 
 	if ( false === empty( $artists ) && false === is_wp_error( $artists ) ) {
 		$term_ids = wp_list_pluck( $artists, 'term_id' );
 
-		$query = new WP_Query( array(
+		$args = array(
 			'post__not_in' => array( get_the_ID() ),
 			'post_type' => 'albums',
 			'posts_per_page' => 5,
 			'tax_query' => array(
 				array( 'taxonomy' => 'artist', 'terms' => $term_ids )
 			)
-		) );
+		);
+
+		if ( $randomise ) {
+			$args['orderby'] = 'rand';
+		}
+
+		$query = new WP_Query( $args );
 	}
 
 	return $query;
