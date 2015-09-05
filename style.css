@@ -638,8 +638,14 @@ h1 {
 	}
 
 		.grid .albums,
+		.home .albums .image-overlay a,
+		.home .albums .image-overlay a .overlay,
 		.home .albums .image-overlay a .thumb,
-		.home .albums .image-overlay a .thumb img {
+		.home .albums .image-overlay a .thumb img,
+		.archive .albums .image-overlay a,
+		.archive .albums .image-overlay a .overlay,
+		.archive .albums .image-overlay a .thumb,
+		.archive .albums .image-overlay a .thumb img {
 			height:210px;
 			width:210px;
 		}
@@ -672,7 +678,8 @@ h1 {
 			width:440px;
 		}
 
-	.single .article {
+	.single .article,
+	.single .article.type-post {
 		width:580px;
 	}
 }
