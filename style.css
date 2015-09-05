@@ -710,7 +710,7 @@ h1 {
 		}
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 	.demonszone,
 	.grid {
 		font-size:14px;
@@ -737,6 +737,10 @@ h1 {
 		.single-albums .main-content .article .album-tracks {
 			display:none;
 		}
+
+	.image-overlay a .overlay .details {
+		top:40px;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -747,6 +751,7 @@ h1 {
 
 	.grid .albums {
 		float:none;
+		font-size:16px;
 		margin:10px 0 10px 0;
 	}
 
@@ -843,5 +848,9 @@ h1 {
 
 	.single-albums .main-content .article .album-tracks {
 		display:none;
+	}
+
+	.image-overlay a .overlay .details {
+		top:80px;
 	}
 }
