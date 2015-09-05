@@ -632,9 +632,14 @@ h1 {
 		}
 
 @media screen and (max-width: 1280px) {
-	.demonszone {
+	.demonszone, .grid {
 		width:920px;
 	}
+
+		.grid .albums, .image-overlay a .thumb, .image-overlay a .thumb img {
+			height:210px;
+			width:210px;
+		}
 
 	.home .main-content .news .main {
 		font-size:12px;
