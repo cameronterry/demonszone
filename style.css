@@ -682,6 +682,23 @@ h1 {
 	.single .article.type-post {
 		width:580px;
 	}
+
+	.single-albums .main-content .article {
+		float:none;
+		margin:0 10px 20px 10px;
+	}
+
+	.single-albums .main-content .col {
+		width:280px;
+	}
+
+		.single-albums .main-content .col .image-overlay a,
+		.single-albums .main-content .col .image-overlay a .overlay,
+		.single-albums .main-content .col .image-overlay a .thumb,
+		.single-albums .main-content .col .image-overlay a .thumb img {
+			height:280px;
+			width:280px;
+		}
 }
 
 @media screen and (max-width: 500px) {
