@@ -631,7 +631,44 @@ h1 {
 			margin:0 0 20px 0;
 		}
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 1280px) {
+	.demonszone {
+		width:920px;
+	}
+
+	.home .main-content .news .main {
+		font-size:12px;
+	}
+
+		.home .main-content .news .main .article {
+			height:auto;
+			padding:7px;
+			width:440px;
+		}
+
+		.home .main-content .news .main .feature {
+			margin:0;
+			width:460px;
+		}
+
+			.home .main-content .news .main .feature a img {
+				height:auto;
+				width:460px;
+			}
+
+	.home .main-content .news .sub {
+		font-size:14px;
+	}
+
+		.home .main-content .news .sub .article {
+			width:440px;
+		}
+
+		/*.home .main-content .news .sub .article {
+			width:440px;
+		}*/
+}
+
 @media screen and (max-width: 500px) {
 	.demonszone {
 		font-size:13px;
