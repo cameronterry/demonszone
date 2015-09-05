@@ -669,9 +669,9 @@ h1 {
 			width:440px;
 		}
 
-		/*.home .main-content .news .sub .article {
-			width:440px;
-		}*/
+	.single .article {
+		width:580px;
+	}
 }
 
 @media screen and (max-width: 500px) {
