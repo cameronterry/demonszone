@@ -461,6 +461,16 @@ h1 {
 			transform:scale(1.0);
 		}
 
+	.image-overlay.image-overlay-hover a .overlay {
+		-webkit-transform:scale(1.0);
+		-moz-transform:scale(1.0);
+		-ms-transform:scale(1.0);
+		-o-transform:scale(1.0);
+
+		opacity:1;
+		transform:scale(1.0);
+	}
+
 .main-content .albums h1 {
 	font-size:3.0em;
 }
