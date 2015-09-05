@@ -438,17 +438,17 @@ h1 {
 			}
 
 				.image-overlay a .overlay .details h3 {
-					font-size:28px;
+					font-size:1.75em;
 				}
 
 				.image-overlay a .overlay .details p.artist {
 					color:#777777;
-					font-size:16px;
+					font-size:1.0em;
 					padding:0 0 20px 0;
 				}
 
 				.image-overlay a .overlay .details p.rating {
-					font-size:24px;
+					font-size:1.5em;
 				}
 
 		.image-overlay a:hover .overlay {
