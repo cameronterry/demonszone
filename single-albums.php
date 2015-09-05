@@ -22,14 +22,16 @@
 					<?php the_content(); ?>
 				</div>
 				<p class="rating"><?php dz_album_rating(); ?></p>
-				<h2>Track Listing :</h2>
-				<?php if ( have_rows( 'tracklisting' ) ) : ?>
-					<ol class="tracklisting">
-						<?php while ( have_rows( 'tracklisting' ) ) : the_row(); ?>
-							<li><?php the_sub_field( 'song_name' ); ?></li>
-						<?php endwhile; ?>
-					</ol>
-				<?php endif; ?>
+				<div class="album-tracks">
+					<h2>Track Listing :</h2>
+					<?php if ( have_rows( 'tracklisting' ) ) : ?>
+						<ol class="tracklisting">
+							<?php while ( have_rows( 'tracklisting' ) ) : the_row(); ?>
+								<li><?php the_sub_field( 'song_name' ); ?></li>
+							<?php endwhile; ?>
+						</ol>
+					<?php endif; ?>
+				</div>
 			</article>
 
 			<aside class="col">
