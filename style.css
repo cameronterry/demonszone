@@ -684,13 +684,8 @@ h1 {
 	}
 
 	.single-albums .main-content .article {
-		float:none;
 		margin:0 10px 20px 10px;
 	}
-
-		.single-albums .main-content .article .album-tracks {
-			display:none;
-		}
 
 	.single-albums .main-content .col {
 		width:280px;
@@ -702,6 +697,35 @@ h1 {
 		.single-albums .main-content .col .image-overlay a .thumb img {
 			height:280px;
 			width:280px;
+		}
+}
+
+@media screen and (max-width: 600px) {
+	.demonszone,
+	.grid {
+		font-size:14px;
+		width:600px;
+	}
+
+	.grid .albums,
+	.home .albums .image-overlay a,
+	.home .albums .image-overlay a .overlay,
+	.home .albums .image-overlay a .thumb,
+	.home .albums .image-overlay a .thumb img,
+	.archive .albums .image-overlay a,
+	.archive .albums .image-overlay a .overlay,
+	.archive .albums .image-overlay a .thumb,
+	.archive .albums .image-overlay a .thumb img {
+		height:280px;
+		width:280px;
+	}
+
+	.single-albums .main-content .article {
+		float:none;
+	}
+
+		.single-albums .main-content .article .album-tracks {
+			display:none;
 		}
 }
 
