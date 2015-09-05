@@ -688,6 +688,10 @@ h1 {
 		margin:0 10px 20px 10px;
 	}
 
+		.single-albums .main-content .article .album-tracks {
+			display:none;
+		}
+
 	.single-albums .main-content .col {
 		width:280px;
 	}
@@ -801,5 +805,9 @@ h1 {
 
 	.single .col {
 		margin:0;
+	}
+
+	.single-albums .main-content .article .album-tracks {
+		display:none;
 	}
 }
