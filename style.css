@@ -168,6 +168,15 @@ h1 {
 		margin:0 0 20px 0;
 	}
 
+	.main-content ul {
+		list-style-type:square;
+	}
+
+		.main-content ul li {
+			margin:0 0 0 20px;
+			padding:0 0 10px 0;
+		}
+
 /**
  * MAIN NAVIGATION
  */
