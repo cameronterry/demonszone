@@ -15,9 +15,14 @@
 				<nav class="navigation">
 		            <div class="sb-toggle-left navbar-left">
 						<a class="dashicons dashicons-menu" href="#"></a>
-						<h1 class="site-name">
-							<a href="<?php echo( home_url( '/' ) ); ?>"><?php echo( get_bloginfo( 'name' ) ); ?></a>
-						</h1>
+						<a class="logo" href="<?php echo( home_url( '/' ) ); ?>">
+							<img src="<?php echo( get_template_directory_uri() ); ?>/assets/img/dz-logo-495x295.png" />
+							<?php if ( is_home() ) : ?>
+								<h1 class="site-name">DemonsZone</h1>
+							<?php else : ?>
+								<div class="site-name">DemonsZone</div>
+							<?php endif; ?>
+						</a>
 					</div>
 		        </nav>
 			</header>
