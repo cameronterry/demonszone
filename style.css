@@ -207,8 +207,15 @@ h1 {
 
 			.main-navigation .logo a {
 				color:#FFFFFF;
+				display:block;
 				text-decoration:none;
 			}
+
+				.main-navigation .logo a img {
+					display:block;
+					margin:0 auto;
+					width:222px;
+				}
 
 		.main-navigation .search-form {
 			margin:0 20px 10px 20px;

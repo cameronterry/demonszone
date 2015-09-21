@@ -2,7 +2,9 @@
 	</div>
 	<div class="sb-slidebar sb-left sb-style-push main-navigation">
 		<div class="logo">
-			<a href="<?php echo( home_url( '/' ) ); ?>">DZ</a>
+			<a href="<?php echo( home_url( '/' ) ); ?>">
+				<img src="<?php echo( get_template_directory_uri() ); ?>/assets/img/dz-logo-495x295.png" />
+			</a>
 		</div>
 		<form action="<?php echo( home_url( '/' ) ); ?>" class="search-form" method="get">
 			<input id="s" name="s" class="search-box" placeholder="Search..." type="text" value="" />
