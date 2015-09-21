@@ -41,7 +41,7 @@
 					<p><?php the_terms( get_the_ID(), 'genres', 'Genres : ', ', ' ); ?></p>
 					<p>Release Date : <?php dz_album_release_date(); ?></p>
 				</div>
-				<?php if ( $related_albums->have_posts() ) : ?>
+				<?php if ( false === empty( $related_albums ) && $related_albums->have_posts() ) : ?>
 					<h2 class="heading">Related Albums:</h2>
 					<?php while ( $related_albums->have_posts() ) : $related_albums->the_post(); ?>
 						<?php get_template_part( 'content', 'albums' ); ?>
@@ -50,7 +50,7 @@
 				<?php endif; ?>
 			</aside>
 
-			<?php if ( $albums_by_genres->have_posts() ) : ?>
+			<?php if ( false === empty( $albums_by_genres ) && $albums_by_genres->have_posts() ) : ?>
 				<aside class="col">
 					<h2 class="heading">More Albums:</h2>
 					<?php while ( $albums_by_genres->have_posts() ) : $albums_by_genres->the_post(); ?>
