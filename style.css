@@ -587,6 +587,11 @@ h1 {
 			margin:0 0 40px 0;
 		}
 
+			.single .article .copy .aligncenter, .single .article .copy .alignnone {
+				display:block;
+				margin:0 auto;
+			}
+
 		.single .article .list-item {
 			border-bottom:1px solid #3e3e3e;
 			font-family:'Merriweather Sans', sans-serif;
