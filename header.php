@@ -5,7 +5,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
 	<?php wp_head(); ?>
+
+	<script type="text/javascript">
+
+        ( function ( $ ) {
+            $( document ).ready( function () {
+                dfp.collapsable = true;
+                dfp.network = '/419138208/dz';
+                dfp.zone = '';
+
+                dfp.enable();
+            } );
+        } )( jQuery );
+
+    </script>
 </head>
 <body <?php body_class(); ?>>
 	<?php do_action( 'body_open' ); ?>
