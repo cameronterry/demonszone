@@ -143,11 +143,20 @@ h1 {
 	background-color:#0A0A0A !important;
 }
 
+.mobile {
+	display:none;
+}
+
 .demonszone {
 	position:relative;
 	margin:0 auto;
 	width:1280px;
 }
+
+	.demonszone .leaderboard {
+		padding:0 0 20px 0;
+		text-align:center;
+	}
 
 .main-content {
 	margin:0 0 40px 0;
@@ -764,6 +773,14 @@ h1 {
 	.demonszone {
 		font-size:13px;
 		width:300px;
+	}
+
+	.desktop {
+		display:none;
+	}
+
+	.mobile {
+		display:static;
 	}
 
 	.grid .albums {
