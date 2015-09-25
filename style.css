@@ -588,7 +588,6 @@ h1 {
 		}
 
 			.single .article .copy .aligncenter, .single .article .copy .alignnone {
-				display:qblock;
 				margin:0 auto;
 			}
 
