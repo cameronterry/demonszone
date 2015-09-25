@@ -588,7 +588,7 @@ h1 {
 		}
 
 			.single .article .copy .aligncenter, .single .article .copy .alignnone {
-				display:block;
+				display:qblock;
 				margin:0 auto;
 			}
 
@@ -769,6 +769,19 @@ h1 {
 		margin:10px 0 10px 0;
 	}
 
+	.grid .albums,
+	.home .albums .image-overlay a,
+	.home .albums .image-overlay a .overlay,
+	.home .albums .image-overlay a .thumb,
+	.home .albums .image-overlay a .thumb img,
+	.archive .albums .image-overlay a,
+	.archive .albums .image-overlay a .overlay,
+	.archive .albums .image-overlay a .thumb,
+	.archive .albums .image-overlay a .thumb img {
+		height:300px;
+		width:300px;
+	}
+
 	.main-content.all-listing {
 		border:none;
 		margin:0;
@@ -856,13 +869,26 @@ h1 {
 		width:300px;
 	}
 
-	.single .col {
+	.single-albums .main-content .article {
 		margin:0;
 	}
 
-	.single-albums .main-content .article .album-tracks {
-		display:none;
+		.single-albums .main-content .article .album-tracks {
+			display:none;
+		}
+
+	.single-albums .main-content .col {
+		margin:0;
+		width:300px;
 	}
+
+		.single-albums .main-content .col .image-overlay a,
+		.single-albums .main-content .col .image-overlay a .overlay,
+		.single-albums .main-content .col .image-overlay a .thumb,
+		.single-albums .main-content .col .image-overlay a .thumb img {
+			height:300px;
+			width:300px;
+		}
 
 	.image-overlay a .overlay .details {
 		top:80px;
