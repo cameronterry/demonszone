@@ -41,6 +41,9 @@
 					<p><?php the_terms( get_the_ID(), 'genres', 'Genres : ', ', ' ); ?></p>
 					<p>Release Date : <?php dz_album_release_date(); ?></p>
 				</div>
+
+				<div rel="advert" data-sizes="300x250,300x600"></div>
+
 				<?php if ( false === empty( $related_albums ) && $related_albums->have_posts() ) : ?>
 					<h2 class="heading">Related Albums:</h2>
 					<?php while ( $related_albums->have_posts() ) : $related_albums->the_post(); ?>

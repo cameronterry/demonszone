@@ -24,6 +24,8 @@
 			</article>
 
 			<aside class="col">
+				<div rel="advert" data-sizes="300x250,300x600"></div>
+				
 				<?php if ( false === empty( $related_albums ) && $related_albums->have_posts() ) : ?>
 					<h2 class="heading">Related Albums:</h2>
 					<?php while ( $related_albums->have_posts() ) : $related_albums->the_post(); ?>
