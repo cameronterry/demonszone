@@ -327,7 +327,7 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 		.home .main-content .news .main .article {
 			border-bottom:1px solid #3e3e3e;
 			float:left;
-			height:50px;
+			min-height:50px;
 			margin:0 10px;
 			padding:10px;
 			width:610px;
