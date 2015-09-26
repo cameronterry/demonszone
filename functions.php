@@ -17,6 +17,7 @@ function dz_after_setup_theme() {
 	add_theme_support( 'post-formats' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'html5' );
+	add_theme_support( 'title-tag' );
 
 	/** Jetpack Infinity Scroll */
 	add_theme_support( 'infinite-scroll', array(
