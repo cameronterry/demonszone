@@ -2,11 +2,11 @@
 
 function dz_infinity_scroll() {
 	echo( '<div class="leaderboard"><div class="desktop" rel="advert" data-sizes="728x90"></div><div class="mobile" rel="advert" data-sizes="320x100"></div></div>' );
-	
+
 	while( have_posts() ) {
 		the_post();
 
-		if ( is_tax( 'genres' ) ) {
+		if ( is_tax( 'genres' ) || is_post_type_archive( 'albums' ) ) {
 			get_template_part( 'content', get_post_format() );
 		}
 		else {
