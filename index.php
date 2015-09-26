@@ -35,6 +35,12 @@
 				</div>
 			<?php endif; ?>
 		</section>
+
+		<div class="leaderboard">
+			<div class="desktop" rel="advert" data-sizes="728x90"></div>
+			<div class="mobile" rel="advert" data-sizes="320x100"></div>
+		</div>
+
 		<?php if ( is_front_page() ) : ?>
 			<section class="albums clearfix">
 				<h2><a href="<?php echo( get_post_type_archive_link( 'albums' ) ); ?>">Album Reviews</a></h2>
