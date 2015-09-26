@@ -19,6 +19,12 @@
 	$( document ).ready( function() {
 		$.slidebars();
 		response_embed();
+
+		/** Jetpack Infinity Scroll logic. */
+		$( document.body ).on( 'post-load', function () {
+			console.log( jQuery( 'div[rel="advert"]' ) );
+	        dfp.cycle();
+	    } );
 	} );
 
 	/** Connect the responsive embed code to the resize event. */

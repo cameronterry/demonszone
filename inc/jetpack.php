@@ -1,6 +1,8 @@
 <?php
 
 function dz_infinity_scroll() {
+	echo( '<div class="leaderboard"><div class="desktop" rel="advert" data-sizes="728x90"></div><div class="mobile" rel="advert" data-sizes="320x100"></div></div>' );
+	
 	while( have_posts() ) {
 		the_post();
 
