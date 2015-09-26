@@ -143,6 +143,10 @@ h1 {
 	background-color:#0A0A0A !important;
 }
 
+div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
+	clear:none !important;
+}
+
 .mobile {
 	display:none;
 }
@@ -304,6 +308,10 @@ h1 {
 	.home .main-content h2 a {
 		border-bottom:none;
 	}
+
+.home .main-content .leaderboard {
+	padding:20px 0;
+}
 
 .home .main-content .news {}
 

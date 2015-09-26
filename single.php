@@ -18,14 +18,16 @@
 					by <?php the_author_posts_link(); ?>
 				</p>
 				<div class="copy">
+					<?php dz_share_buttons(); ?>
 					<?php the_content(); ?>
+					<?php dz_share_buttons(); ?>
 					<p><?php the_terms( get_the_ID(), 'artist', 'Artist(s) : ' ); ?></p>
 				</div>
 			</article>
 
 			<aside class="col">
 				<div rel="advert" data-sizes="300x250,300x600"></div>
-				
+
 				<?php if ( false === empty( $related_albums ) && $related_albums->have_posts() ) : ?>
 					<h2 class="heading">Related Albums:</h2>
 					<?php while ( $related_albums->have_posts() ) : $related_albums->the_post(); ?>

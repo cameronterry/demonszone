@@ -23,3 +23,20 @@ function dz_infinite_scroll_archive_supported() {
 	return true;
 }
 add_filter( 'infinite_scroll_archive_supported', 'dz_infinite_scroll_archive_supported' );
+
+function dz_share_buttons() {
+	if ( function_exists( 'sharing_display' ) ) {
+	    sharing_display( '', true );
+	}
+}
+
+function dz_share_remove() {
+    remove_filter( 'the_content', 'sharing_display',19 );
+    remove_filter( 'the_excerpt', 'sharing_display',19 );
+
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+ 
+add_action( 'loop_start', 'dz_share_remove' );

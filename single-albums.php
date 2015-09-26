@@ -19,7 +19,9 @@
 					by <?php the_author_posts_link(); ?>
 				</p>
 				<div class="copy">
+					<?php dz_share_buttons(); ?>
 					<?php the_content(); ?>
+					<?php dz_share_buttons(); ?>
 				</div>
 				<p class="rating"><?php dz_album_rating(); ?></p>
 				<div class="album-tracks">

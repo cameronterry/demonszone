@@ -12,5 +12,6 @@
 			by <?php the_author_posts_link(); ?>
 			<?php the_terms( get_the_ID(), 'artist', ' | Artist(s): ', ', ', '' ); ?>
 		</p>
+		<?php dz_share_buttons(); ?>
 	</div>
 </article>
