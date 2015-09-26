@@ -682,6 +682,10 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 			margin:0 0 20px 0;
 		}
 
+	.single .article.page {
+		width:100%;
+	}
+
 @media screen and (max-width: 1280px) {
 	.demonszone,
 	.grid {
