@@ -59,7 +59,12 @@
 					<?php while ( $albums_by_genres->have_posts() ) : $albums_by_genres->the_post(); ?>
 						<?php get_template_part( 'content', 'albums' ); ?>
 					<?php endwhile; ?>
+
 					<?php wp_reset_postdata(); ?>
+
+					<div class="divider"></div>
+
+					<div rel="advert" data-sizes="300x250,300x600"></div>
 				</aside>
 			<?php endif; ?>
 		<?php endwhile; ?>

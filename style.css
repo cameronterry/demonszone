@@ -644,6 +644,13 @@ h1 {
 		width:300px;
 	}
 
+		.single .col .divider {
+			background-color:#3E3E3E;
+			border-top:1px solid #3E3E3E;
+			height:4px;
+			margin:0 0 20px 0;
+		}
+
 		.single .col .heading {
 			border:1px solid #3E3E3E;
 			font-size:1.85em;
