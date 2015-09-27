@@ -605,7 +605,18 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 		}
 
 			.single .article .copy .aligncenter, .single .article .copy .alignnone {
+				display:block;
 				margin:0 auto;
+			}
+
+			.single .article .copy .alignleft {
+				float:left;
+				margin:0 10px 10px 0;
+			}
+
+			.single .article .copy .alignright {
+				float:left;
+				margin:0 0 10px 10px;
 			}
 
 		.single .article .list-item {
