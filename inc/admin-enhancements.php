@@ -7,7 +7,7 @@ function dz_columns_headers( $defaults ) {
 		'feature_image' => 'Feature Image',
 	) );
 }
-add_filter( 'manage_posts_columns', 'dz_columns_headers' );
+add_filter( 'manage_albums_posts_columns', 'dz_columns_headers' );
 
 function dz_columns_contents( $column_name, $post_id ) {
 	if ( 'release_date' === $column_name ) {
@@ -40,7 +40,7 @@ function dz_columns_contents( $column_name, $post_id ) {
 		}
 	}
 }
-add_action( 'manage_posts_custom_column', 'dz_columns_contents', 10, 2 );
+add_action( 'manage_albums_posts_custom_column', 'dz_columns_contents', 10, 2 );
 
 function dz_columns_contents_none( $title = '', $text = 'NONE' ) {
 	printf( '<strong style="color:#CC0000;" title="%2$s">%1$s</strong>', esc_html( $text ), esc_attr( $title ) );
