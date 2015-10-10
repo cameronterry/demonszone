@@ -16,6 +16,13 @@
 		} );
 	};
 
+	/**
+	 * Method for hooking up Social Interaction tracking with Jetpack's Sharedaddy
+	 * icons.
+	 *
+	 * Credit : https://developers.google.com/analytics/devguides/collection/analyticsjs/social-interactions
+	 * Credit : http://www.statstory.com/social-tracking-with-wordpress-jetpack-google-analytics/
+	 */
 	var dz_jetpack_ga_social = function () {
 		$( '.sharedaddy ul li a' ).each( function () {
 			/**
@@ -50,6 +57,8 @@
 				/**
 				 * Handle the URL and get rid of any hash or querystring non-sense so we get a
 				 * clean URL for Google Analytics.
+				 *
+				 * Credit: http://stackoverflow.com/a/2541083
 				 */
 				var url = $sharedaddy_button.attr( 'href' )
 
