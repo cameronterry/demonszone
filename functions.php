@@ -1,7 +1,7 @@
 <?php
 
 define( 'DZ_INC', get_template_directory() );
-define( 'DZ_VERSION', '5.0.0' );
+define( 'DZ_VERSION', '5.0.2' );
 define( 'DZ_PLUGIN_ENABLE', true );
 
 require_once( DZ_INC . '/inc/admin-enhancements.php' );
