@@ -18,13 +18,47 @@ function dz_album_is_recent() {
 	return ( 3 >= intval( $interval->format( '%a' ) ) );
 }
 
+/**
+ * Used instead of WordPress' in-built the_author_posts_link().
+ * 
+ * Credit: https://developer.wordpress.org/reference/functions/the_author_posts_link/
+ */
+function dz_album_the_author() {
+	global $authordata;
+
+    if ( ! is_object( $authordata ) ) {
+        return;
+    }
+ 
+    printf(
+        '<a href="%1$s" title="%2$s" rel="author" itemscope itemprop="author" itemtype="http://schema.org/Person"><span itemprop="name">%3$s</span></a>',
+        esc_url( get_author_posts_url( $authordata->ID, $authordata->user_nicename ) ),
+        esc_attr( sprintf( __( 'Posts by %s' ), get_the_author() ) ),
+        get_the_author()
+    );
+}
+
 function dz_album_rating( $prefix = 'Rating : ', $sep = ' / ' ) {
 	printf( '%3$s<span itemprop="ratingValue">%1$s</span>%2$s<span itemprop="bestRating">10</span>', get_field( 'rating' ), $sep, $prefix );
+
+	// echo( '<meta itemprop="worstRating" property="v:worst" content="0" />' );
+	// echo( '<meta itemprop="bestRating" property="v:best" content="10" />' );
+	// printf( '<meta itemprop="ratingValue" property="v:rating" content="%1$s" />', get_field( 'rating' ) );
 }
 
 function dz_album_release_date( $format = null ) {
 	$release = DateTime::createFromFormat( 'Ymd', get_field( 'release_date' ) );
 	echo( $release->format( null === $format ? get_option( 'date_format' ) : $format ) );
+}
+
+function dz_album_schema_meta() {
+	/** Publication Dates. */
+	$publish_date = date( DateTime::ISO8601, strtotime( get_the_date( 'Y/m/d g:i:s' ) ) );
+	printf( '<meta itemprop="datePublished" content="%1$s" />', $publish_date );
+
+	/** Feature Image */
+	$image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
+	printf( '<meta itemprop="image" content="%1$s" />', $image_url[0] );
 }
 
 function dz_get_pings() {
