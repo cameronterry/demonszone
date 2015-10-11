@@ -15,7 +15,7 @@ function dz_album_is_recent() {
 
 	$article_date = date_create( get_the_date() );
 	$interval = date_diff( $article_date, $today );
-	return ( 7 >= intval( $interval->format( '%a' ) ) );
+	return ( 3 >= intval( $interval->format( '%a' ) ) );
 }
 
 function dz_album_rating( $prefix = 'Rating : ', $sep = ' / ' ) {
