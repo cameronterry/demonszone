@@ -74,10 +74,46 @@
 		} );
 	};
 
+	var dz_related_articles = function () {
+		if ( $( document.body ).hasClass( 'single' ) && $( document.body ).hasClass( 'single-post' ) ) {
+			var $paragraphs = $( '.copy p' );
+			var paragraph_count = $paragraphs.length;
+			var artist = ( 0 < demonszone.artist.length ? demonszone.artist[0] : false );
+
+			/**
+			 * Attempt to retrieve the related articles if the story is big enough
+			 * and there is an Artist (the current mechanism for determining how
+			 * related a story that is).
+			 */
+			if ( 8 <= paragraph_count && false !== artist ) {
+				$.getJSON( demonszone.rest_url + 'wp/v2/posts?per_page=5&filter[artist]=' + artist, function ( data ) {
+					var related_articles = '';
+					var template = '<ul>{{.}}<li><a href="{{link}}">{{title.rendered}}</a></li>{{/.}}</ul>';
+
+					/** We attempt to position the posts in the middle of the article. */
+					var position = Math.ceil( paragraph_count / 2 );
+
+					/**
+					 * Check to see if the paragraph contains a colon or semi-colon. This would
+					 * suggest that it is the paragraph before a list of tour dates or a track
+					 * listing.
+					 */
+					if ( 0 < $paragraphs[position].innerText.indexOf( ':' ) || 0 < $paragraphs[position].innerText.indexOf( ';' ) ) {
+						position--;
+					}
+
+					/** Finally, insert the related content into the article. */
+					$( $paragraphs[position] ).after( '<div class="related"><h2>Related</h2>' + Mark.up( template, data ) + '</div>' );
+				} );
+			}
+		}
+	};
+
 	$( document ).ready( function() {
 		$.slidebars();
 
 		dz_jetpack_ga_social();
+		dz_related_articles();
 		response_embed();
 
 		/** Jetpack Infinity Scroll logic. */
