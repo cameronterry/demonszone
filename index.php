@@ -42,10 +42,44 @@
 		</div>
 
 		<?php if ( is_front_page() ) : ?>
+			<section class="news clearfix">
+				<h2>Gig Reviews</h2>
+				<?php
+
+					$gigs = new WP_Query( array( 'post_type' => 'gigs', 'posts_per_page' => 6 ) );
+					update_post_thumbnail_cache( $gigs );
+
+				?>
+				<?php if ( $gigs->have_posts() ) : ?>
+					<div class="sub clearfix">
+						<?php while ( $gigs->have_posts() ) : $gigs->the_post(); ?>
+							<article <?php post_class( array( 'article', 'clearfix' ) ); ?>>
+								<?php if ( has_post_thumbnail() ) : ?>
+									<a class="thumbnail" href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'news-thumb-tiny' ); ?></a>
+								<?php endif; ?>
+								<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+								<p class="byline"><span class="post-date updated" itemprop="datePublished" content="<?php echo( get_the_date( 'Y-m-d' ) ); ?>"><?php echo( get_the_date() ); ?></span> by <?php the_author(); ?></p>
+							</article>
+						<?php endwhile; ?>
+					</div>
+				<?php endif; ?>
+				<?php wp_reset_postdata(); ?>
+			</section>
+
+			<div class="leaderboard">
+				<div class="desktop" rel="advert" data-sizes="728x90,970x250"></div>
+				<div class="mobile" rel="advert" data-sizes="320x100"></div>
+			</div>
+
 			<section class="albums clearfix">
 				<h2><a href="<?php echo( get_post_type_archive_link( 'albums' ) ); ?>">Album Reviews</a></h2>
 				<div class="grid">
-					<?php $albums = new WP_Query( array( 'post_type' => 'albums', 'posts_per_page' => 16 ) ); ?>
+					<?php
+
+						$albums = new WP_Query( array( 'post_type' => 'albums', 'posts_per_page' => 16 ) );
+						update_post_thumbnail_cache( $albums );
+
+					?>
 					<?php while ( $albums->have_posts() ) : $albums->the_post(); ?>
 						<article <?php post_class( array( 'image-overlay' ) ); ?>>
 							<a href="<?php the_permalink(); ?>">
