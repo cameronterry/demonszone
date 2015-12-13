@@ -1,7 +1,7 @@
 <?php
 
 define( 'DZ_INC', get_template_directory() );
-define( 'DZ_VERSION', '5.0.2' );
+define( 'DZ_VERSION', '5.1.0' );
 define( 'DZ_PLUGIN_ENABLE', true );
 
 require_once( DZ_INC . '/inc/admin-enhancements.php' );
@@ -55,9 +55,27 @@ function dz_enqueue_scripts() {
 	wp_enqueue_style( 'dz-merriweather-sans', '//fonts.googleapis.com/css?family=Merriweather+Sans:400,300,700' );
 	wp_enqueue_style( 'dz-style', get_stylesheet_uri(), array( 'dashicons', 'dz-merriweather', 'dz-merriweather-sans', 'slidebars' ), DZ_VERSION );
 
-	wp_enqueue_script( 'dfp', get_stylesheet_directory_uri() . '/assets/js/dfp.js', array( 'jquery' ), '1.3.0' );
-	wp_enqueue_script( 'slidebars', get_stylesheet_directory_uri() . '/assets/js/slidebars.min.js', array( 'jquery' ), DZ_VERSION );
-	wp_enqueue_script( 'dz', get_stylesheet_directory_uri() . '/assets/js/dz.js', array( 'jquery', 'slidebars' ), DZ_VERSION );
+	wp_register_script( 'dfp', get_stylesheet_directory_uri() . '/assets/js/dfp.js', array( 'jquery' ), '1.3.0' );
+	wp_register_script( 'slidebars', get_stylesheet_directory_uri() . '/assets/js/slidebars.min.js', array( 'jquery' ), DZ_VERSION );
+	wp_register_script( 'markup-js', get_stylesheet_directory_uri() . '/assets/js/markup.js', array( 'jquery' ), DZ_VERSION );
+	wp_register_script( 'dz', get_stylesheet_directory_uri() . '/assets/js/dz.js', array( 'dfp', 'jquery', 'markup-js', 'slidebars' ), DZ_VERSION );
+
+	$demonszone_js_settings = array( 'version' => DZ_VERSION );
+
+	/** If the JSON REST API is available, add the */
+	if ( defined( 'REST_API_VERSION' ) ) {
+		$demonszone_js_settings['rest_url'] = get_rest_url();
+	}
+
+	/** If a post, the put the Artists in an array so we can use them. */
+	if ( is_singular( 'post' ) ) {
+		$artists = wp_list_pluck( get_the_terms( get_the_ID(), 'artist' ), 'slug' );
+		$demonszone_js_settings['artist'] = $artists;
+	}
+
+	wp_localize_script( 'dz', 'demonszone', $demonszone_js_settings );
+
+	wp_enqueue_script( 'dz' );
 }
 add_action( 'wp_enqueue_scripts', 'dz_enqueue_scripts' );
 
