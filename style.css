@@ -268,6 +268,20 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 			display:none;
 		}
 
+	.navigation .menu-icons {
+		float:left;
+	}
+
+	.navigation .social-icons {
+		float:right;
+	}
+
+		.navigation .social-icons a.dashicons {
+			font-size:35px;
+			line-height:48px;
+			width:35px;
+		}
+
 .footer {
 	background:#FFFFFF;
 	color:#666666;

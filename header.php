@@ -40,8 +40,8 @@
 	<div id="sb-site">
 		<div class="demonszone">
 			<header>
-				<nav class="navigation">
-		            <div class="sb-toggle-left navbar-left">
+				<nav class="navigation clearfix">
+		            <div class="sb-toggle-left navbar-left menu-icons">
 						<a class="dashicons dashicons-menu" href="#"></a>
 						<a class="logo" href="<?php echo( home_url( '/' ) ); ?>">
 							<img src="<?php echo( get_template_directory_uri() ); ?>/assets/img/dz-logo-495x295.png" />
@@ -51,6 +51,11 @@
 								<div class="site-name">DemonsZone</div>
 							<?php endif; ?>
 						</a>
+					</div>
+					<div class="social-icons">
+						<a class="dashicons dashicons-facebook" href="https://www.facebook.com/demonszone" target="_blank"></a>
+						<a class="dashicons dashicons-twitter" href="https://twitter.com/demonszone" target="_blank"></a>
+						<a class="dashicons dashicons-googleplus" href="https://plus.google.com/+DemonsZoneRediscoveringMusic/" target="_blank"></a>
 					</div>
 		        </nav>
 			</header>
