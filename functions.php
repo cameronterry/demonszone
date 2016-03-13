@@ -101,7 +101,20 @@ function dz_pre_get_posts( $query ) {
 	}
 
 	if ( is_tax( 'genres' ) && $query->is_main_query() ) {
-		$query->set( 'posts_per_page', 20 );	
+		$query->set( 'posts_per_page', 20 );
 	}
 }
 add_action( 'pre_get_posts', 'dz_pre_get_posts' );
+
+function dz_widgets_init() {
+	register_sidebar( array(
+		'name'          => 'News Sidebar',
+		'id'            => 'news-sidebar',
+		'description'   => 'Add widgets to the right-hand column of the News.',
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'dz_widgets_init' );
