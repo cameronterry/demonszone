@@ -711,6 +711,63 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 		width:100%;
 	}
 
+/**
+ * New CSS for the article page.
+ */
+.single-news {
+	float:left;
+	margin-right:-100%;
+	width:70%;
+}
+
+	.single-news .article-news {
+		display:block;
+		margin-bottom:7.0em;
+	}
+
+		.single-news .article-news .entry-content {
+			float:right;
+			width:71.42857144%;
+		}
+
+		.single-news .article-news .entry-footer {
+			font-family:'Merriweather Sans', sans-serif;
+			float:left;
+			margin-top:0.5em;
+			width:21.42857143%;
+		}
+
+			.single-news .article-news .entry-footer a {
+				color:#FFFFFF;
+				font-size:0.875em;
+				line-height:1.6153846154;
+				text-decoration:none;
+			}
+
+			.single-news .article-news .entry-footer .byline {
+				display:block;
+				margin-bottom:0.5384615385em;
+			}
+
+			.single-news .article-news .entry-footer .posted-on {
+				display:block;
+			}
+
+		.single-news .article-news .entry-title {
+			font-size:3.1265em;
+			line-height:1.225;
+			margin-bottom:1.05em;
+		}
+
+		.single-news .article-news .post-thumbnail {
+			margin-bottom:2.625em;
+		}
+
+			.single-news .article-news .post-thumbnail img {
+				height:auto;
+				max-width:100%;
+			}
+
 @media screen and (max-width: 1280px) {
 	.demonszone,
 	.grid {
