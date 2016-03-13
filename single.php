@@ -4,12 +4,14 @@
 			<article id="post-<?php the_ID(); ?>" class="article-news">
 				<header class="entry-header">
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					<?php dz_share_buttons(); ?>
 				</header>
 				<div class="post-thumbnail">
 					<?php the_post_thumbnail( 'news-thumb-xlarge' ); ?>
 				</div>
 				<div class="entry-content">
 					<?php the_content(); ?>
+					<?php dz_share_buttons(); ?>
 				</div>
 				<div class="entry-footer">
 					<span class="byline">
