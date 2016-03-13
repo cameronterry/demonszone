@@ -986,6 +986,10 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 			height:280px;
 			width:280px;
 		}
+
+	.sidebar .widget_advert {
+		display:none;
+	}
 }
 
 @media screen and (max-width: 800px) {
@@ -993,6 +997,10 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 	.grid {
 		font-size:14px;
 		width:600px;
+	}
+
+	.desktop {
+		display:none;
 	}
 
 	.grid .albums,
@@ -1160,6 +1168,25 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 		.single-albums .main-content .col .image-overlay a .thumb img {
 			height:300px;
 			width:300px;
+		}
+
+	.single-news,
+	.single-news .article-news .entry-content,
+	.single-news .article-news .entry-footer {
+		float:none;
+		width:100%;
+	}
+
+	.sidebar {
+		float:none;
+		margin:0;
+		width:auto;
+	}
+
+		.single-news .article-news .entry-footer a,
+		.sidebar ul li a,
+		.tagcloud a {
+			font-size:1.2em !important;
 		}
 
 	.image-overlay a .overlay .details {
