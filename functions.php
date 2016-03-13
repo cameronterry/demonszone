@@ -35,6 +35,7 @@ function dz_after_setup_theme() {
 	add_image_size( 'news-thumb-tiny', 150, 84, true );
 	add_image_size( 'news-thumb', 300, 169, true );
 	add_image_size( 'news-thumb-large', 840, 473, true );
+	add_image_size( 'news-thumb-xlarge', 1200, 676, true );
 
 	/** Homepage Image Sizes */
 	add_image_size( 'homepage-feature', 620, 349, true );
