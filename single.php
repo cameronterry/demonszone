@@ -1,41 +1,30 @@
 <?php get_header(); ?>
-	<main class="main-content single clearfix" role="main">
+	<main class="main-content single-news clearfix" role="main">
 		<?php while ( have_posts() ) : the_post(); ?>
-			<?php
-
-				/** Preparation for Article Elements. */
-				$related_albums = dz_get_related_albums();
-
-			?>
-			<article <?php post_class( 'article' ); ?>>
-				<p class="category"><?php the_category( ',' ); ?></p>
-				<?php if ( has_post_thumbnail() && empty( get_post_meta( get_the_ID(), '_video_thumbnail' ) ) ) : ?>
-					<div class="thumbnail"><?php the_post_thumbnail( 'news-thumb-large' ); ?></div>
-				<?php endif; ?>
-				<h1><?php the_title(); ?></h1>
-				<p class="attribution">
-					Posted on <time><?php the_date(); ?></time>
-					by <?php the_author_posts_link(); ?>
-				</p>
-				<div class="copy">
-					<?php dz_share_buttons(); ?>
+			<article id="post-<?php the_ID(); ?>" class="article-news">
+				<header class="entry-header">
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				</header>
+				<div class="post-thumbnail">
+					<?php the_post_thumbnail( 'news-thumb-xlarge' ); ?>
+				</div>
+				<div class="entry-content">
 					<?php the_content(); ?>
-					<?php dz_share_buttons(); ?>
-					<p><?php the_terms( get_the_ID(), 'artist', 'Artist(s) : ' ); ?></p>
+				</div>
+				<div class="entry-footer">
+					<span class="byline">
+						<span class="author vcard">
+							<a class="url fn n" href="<?php echo( esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) ); ?>"><?php the_author(); ?></a>
+						</span>
+					</span>
+					<span class="posted-on">
+						<time class="entry-date published updated" datetime="<?php echo( esc_attr( get_the_date( 'c' ) ) ); ?>">
+							<a href="<?php the_permalink(); ?>"><?php echo( get_the_date() ); ?></a>
+						</time>
+					</span>
 				</div>
 			</article>
-
-			<aside class="col">
-				<div rel="advert" data-sizes="300x250,300x600"></div>
-
-				<?php if ( false === empty( $related_albums ) && $related_albums->have_posts() ) : ?>
-					<h2 class="heading">Related Albums:</h2>
-					<?php while ( $related_albums->have_posts() ) : $related_albums->the_post(); ?>
-						<?php get_template_part( 'content', 'albums' ); ?>
-					<?php endwhile; ?>
-					<?php wp_reset_postdata(); ?>
-				<?php endif; ?>
-			</aside>
 		<?php endwhile; ?>
 	</main>
+	<?php get_sidebar( 'news-sidebar' ); ?>
 <?php get_footer(); ?>
