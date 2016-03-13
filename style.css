@@ -162,14 +162,27 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 		text-align:center;
 	}
 
+.home .main-content a {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+.home .main-content a:hover {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
 .main-content {
 	margin:0 0 40px 0;
 }
 
 	.main-content a {
-		border-bottom:1px dotted #FFFFFF;
-		color:#FFFFFF;
-		text-decoration:none;
+		color:#84BD00;
+		text-decoration:underline;
+	}
+
+	.main-content a:hover {
+		color:#007acc;
 	}
 
 	.main-content p {
@@ -208,7 +221,7 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 		}
 
 		.main-navigation .menu-item a:hover {
-			background-color:#1d1d1d;
+			background-color:#007acc;
 		}
 
 		.main-navigation .logo {
@@ -780,12 +793,12 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 }
 
 	.sidebar a {
-		color:#98C379;
+		color:#84BD00;
 		text-decoration:none;
 	}
 
 	.sidebar a:hover {
-		color:#686868;
+		color:#007acc;
 	}
 
 	.sidebar ul {
@@ -865,7 +878,7 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 .widget_recent_entries .post-date {
 	color: #686868;
 	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family:'Merriweather Sans', sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	line-height: 1.615384615;
@@ -885,7 +898,7 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 .widget_rss cite {
 	color: #686868;
 	display: block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family:'Merriweather Sans', sans-serif;
 	font-size: 13px;
 	font-size: 0.8125rem;
 	font-style: normal;
@@ -906,7 +919,8 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 	border: 1px solid #d1d1d1;
 	border-radius: 2px;
 	display: inline-block;
-	font-family: Montserrat, "Helvetica Neue", sans-serif;
+	font-family:'Merriweather Sans', sans-serif;
+	font-size:0.795em !important;
 	line-height: 1;
 	margin: 0 0.1875em 0.4375em 0;
 	padding: 0.5625em 0.4375em 0.5em;
