@@ -5,6 +5,7 @@ define( 'DZ_VERSION', '5.1.0' );
 define( 'DZ_PLUGIN_ENABLE', true );
 
 require_once( DZ_INC . '/inc/admin-enhancements.php' );
+require_once( DZ_INC . '/inc/customizer.php' );
 require_once( DZ_INC . '/inc/jetpack.php' );
 require_once( DZ_INC . '/inc/shortcodes.php' );
 require_once( DZ_INC . '/inc/template-tags.php' );
