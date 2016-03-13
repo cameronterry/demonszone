@@ -753,11 +753,15 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 				display:block;
 			}
 
-		.single-news .article-news .entry-title {
-			font-size:3.1265em;
-			line-height:1.225;
-			margin-bottom:1.05em;
+		.single-news .article-news .entry-header {
+			margin-bottom:4.00em;
 		}
+
+			.single-news .article-news .entry-header .entry-title {
+				font-size:3.1265em;
+				line-height:1.225;
+				margin-bottom:0.375em;
+			}
 
 		.single-news .article-news .post-thumbnail {
 			margin-bottom:2.625em;
