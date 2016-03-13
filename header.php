@@ -62,5 +62,5 @@
 
 			<div class="leaderboard">
 				<div class="desktop" rel="advert" data-sizes="728x90,970x250"></div>
-				<div class="mobile" rel="advert" data-sizes="320x100"></div>
+				<div class="dz-mobile" rel="advert" data-sizes="320x100"></div>
 			</div>

@@ -1,7 +1,7 @@
 <?php
 
 function dz_infinity_scroll() {
-	echo( '<div class="leaderboard"><div class="desktop" rel="advert" data-sizes="728x90"></div><div class="mobile" rel="advert" data-sizes="320x100"></div></div>' );
+	echo( '<div class="leaderboard"><div class="desktop" rel="advert" data-sizes="728x90"></div><div class="dz-mobile" rel="advert" data-sizes="320x100"></div></div>' );
 
 	while( have_posts() ) {
 		the_post();
@@ -40,5 +40,5 @@ function dz_share_remove() {
         remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
     }
 }
- 
+
 add_action( 'loop_start', 'dz_share_remove' );
