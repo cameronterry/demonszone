@@ -743,6 +743,53 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 			width:71.42857144%;
 		}
 
+			.single-news .article-news .entry-content blockquote {
+				border-left:5px solid #84BD00;
+				font-size:1.575em;
+				padding:0.2em 1em 0.5em 1em;
+			}
+
+				.single-news .article-news .entry-content blockquote p:last-child {
+					margin:0.5em 0 0 0;
+				}
+
+			.single-news .article-news .entry-content em {
+				font-style:italic;
+			}
+
+			.single-news .article-news .entry-content ol {
+				display:block;
+				list-style-type:decimal-leading-zero;
+				margin:1.0em 1.0em 1.0em 2.0em;
+				padding:0 0 0 20px;
+			}
+
+				.single-news .article-news .entry-content ol li {
+					padding:0.25em 0;
+				}
+
+			.single-news .article-news .entry-content strong {
+				font-weight:bold;
+				text-transform:uppercase;
+			}
+
+			.single-news .article-news .entry-content .aligncenter {
+				display:block;
+				margin:0 auto;
+				height:auto !important;
+				max-width:100% !important;
+			}
+
+			.single-news .article-news .entry-content .alignleft {
+				float:left;
+				margin:0.5em 1em 0.5em 0;
+			}
+
+			.single-news .article-news .entry-content .alignright {
+				float:left;
+				margin:0.5em 0 0.5em 1em;
+			}
+
 		.single-news .article-news .entry-footer {
 			font-family:'Merriweather Sans', sans-serif;
 			float:left;
@@ -781,7 +828,9 @@ div.sharedaddy, #content div.sharedaddy, #main div.sharedaddy {
 		}
 
 			.single-news .article-news .post-thumbnail img {
+				display:block;
 				height:auto;
+				margin:0 auto;
 				max-width:100%;
 			}
 
