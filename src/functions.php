@@ -3,6 +3,11 @@
 define( 'DZ_VERSION', '6.0.0-rev1' );
 define( 'DZ_DB_VERSION', '28af254' );
 
+function dz_enqueue_styles() {
+	wp_enqueue_style( 'demonszone', get_stylesheet_uri(), array(), DZ_VERSION );
+}
+add_action( 'wp_enqueue_scripts', 'dz_enqueue_styles' );
+
 function dz_maybe_upgrade() {
 	$current_version = get_option( 'demonszone_version', null );
 
