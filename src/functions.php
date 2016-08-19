@@ -9,6 +9,16 @@ require_once( DZ_INC . '/post-types.php' );
 require_once( DZ_INC . '/shortcodes.php' );
 require_once( DZ_INC . '/template-tags.php' );
 
+function dz_enqueue_scripts() {
+	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+		wp_enqueue_script( 'demonszone', get_template_directory_uri() . '/dz.js', array(), DZ_VERSION, false );
+	}
+	else {
+		wp_enqueue_script( 'demonszone-min', get_template_directory_uri() . '/dz.min.js', array(), DZ_VERSION, false );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'dz_enqueue_scripts' );
+
 function dz_enqueue_styles() {
 	wp_enqueue_style( 'demonszone', get_stylesheet_uri(), array(), DZ_VERSION );
 }
