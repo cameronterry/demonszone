@@ -13,10 +13,6 @@ add_action( 'wp_enqueue_scripts', 'dz_enqueue_styles' );
 function dz_maybe_upgrade() {
 	$current_version = get_option( 'demonszone_version', null );
 
-	if ( DZ_VERSION !== $current_version ) {
-		update_option( 'demonszone_version', DZ_VERSION );
-	}
-
 	if ( DZ_DB_VERSION !== $current_version ) {
 		global $wpdb;
 		update_option( 'demonszone_db_version', DZ_DB_VERSION );
