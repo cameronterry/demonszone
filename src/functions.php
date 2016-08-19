@@ -3,7 +3,11 @@
 define( 'DZ_VERSION', '6.0.0-rev1' );
 define( 'DZ_DB_VERSION', '28af254' );
 
-define( 'DZ_INC', get_stylesheet_directory() . '/inc/' );
+define( 'DZ_INC', get_stylesheet_directory() . '/inc' );
+
+require_once( DZ_INC . '/post-types.php' );
+require_once( DZ_INC . '/shortcodes.php' );
+require_once( DZ_INC . '/template-tags.php' );
 
 function dz_enqueue_styles() {
 	wp_enqueue_style( 'demonszone', get_stylesheet_uri(), array(), DZ_VERSION );
