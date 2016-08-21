@@ -28,3 +28,8 @@ function dz_maybe_upgrade() {
 	}
 }
 add_action( 'init', 'dz_maybe_upgrade' );
+
+function dz_setup() {
+	add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'dz_setup' );
