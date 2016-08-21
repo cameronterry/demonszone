@@ -13,7 +13,9 @@ function dz_enqueue_scripts() {
 	$is_min = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min' );
 
 	wp_enqueue_script( 'dz', get_template_directory_uri() . "/dz{$is_min}.js", array(), DZ_VERSION, false );
-	wp_enqueue_style( 'demonszone', get_stylesheet_uri(), array(), DZ_VERSION );
+
+	wp_register_style( 'roboto', set_url_scheme( 'https://fonts.googleapis.com/css?family=Roboto', is_ssl() ), array() );
+	wp_enqueue_style( 'demonszone', get_stylesheet_uri(), array( 'roboto' ), DZ_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'dz_enqueue_scripts' );
 
