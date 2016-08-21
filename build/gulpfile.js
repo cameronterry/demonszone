@@ -4,7 +4,18 @@ var gulp = require( 'gulp' ),
 	uglify = require( 'gulp-uglify' ),
 	rename = require( 'gulp-rename' );
 
-gulp.task( 'jscompress', function ( callback ) {
+var destination_path = '../src/';
+
+gulp.task( 'less', function ( callback ) {
+	pump( [
+		gulp.src( ['site.less'] ),
+		concat( 'style.css' ),
+		less(),
+		gulp.dest( destination_path )
+	] );
+} );
+
+gulp.task( 'javascript', function ( callback ) {
 	pump( [
 		gulp.src( ['javascript/zepto.js'] ),
 		concat( 'dz.js' ),
@@ -15,7 +26,7 @@ gulp.task( 'jscompress', function ( callback ) {
 		rename( {
 			extname: '.min.js'
 		} ),
-		gulp.dest( '../src/' )
+		gulp.dest( destination_path )
 	], callback );
 } );
 
