@@ -33,5 +33,5 @@ gulp.task( 'javascript', function ( callback ) {
 } );
 
 gulp.task( 'default', [
-	'jscompress'
+	'less', 'javascript'
 ] );
