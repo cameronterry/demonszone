@@ -35,3 +35,7 @@ gulp.task( 'javascript', function ( callback ) {
 gulp.task( 'default', [
 	'less', 'javascript'
 ] );
+
+gulp.task( 'watch', function() {
+	gulp.watch( 'less/*', ['less'] );
+} );
