@@ -13,3 +13,7 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<?php do_action( 'body_open' ); ?>
+
+		<header class="mast">
+			Hello world
+		</header>
