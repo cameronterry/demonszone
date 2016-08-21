@@ -15,5 +15,9 @@
 		<?php do_action( 'body_open' ); ?>
 
 		<header class="mast">
-			Hello world
+			<div class="container">
+				<h1>Hello world</h1>
+			</div>
 		</header>
+
+		<main class="container">
