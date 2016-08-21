@@ -10,7 +10,7 @@ var destination_path = '../src/';
 
 gulp.task( 'less', function ( callback ) {
 	pump( [
-		gulp.src( ['less/theme.less', 'less/site.less'] ),
+		gulp.src( ['theme.css', 'less/*.less'] ),
 		less().on( 'error', util.log ),
 		concat( 'style.css' ),
 		gulp.dest( destination_path )
