@@ -16,7 +16,7 @@
 
 		<header class="mast">
 			<div class="container">
-				<h1>Hello world</h1>
+				<h1>DemonsZone</h1>
 			</div>
 		</header>
 
