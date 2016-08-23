@@ -5,6 +5,7 @@ define( 'DZ_DB_VERSION', '28af254' );
 
 define( 'DZ_INC', get_stylesheet_directory() . '/inc' );
 
+require_once( DZ_INC . '/embeds.php' );
 require_once( DZ_INC . '/post-types.php' );
 require_once( DZ_INC . '/shortcodes.php' );
 require_once( DZ_INC . '/template-tags.php' );
