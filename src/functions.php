@@ -30,6 +30,13 @@ function dz_maybe_upgrade() {
 add_action( 'init', 'dz_maybe_upgrade' );
 
 function dz_setup() {
+	/** Set the various image sizes. */
+	add_image_size( 'dz-news-feature', 592, 333 );
+
+	/** Enable all the various theme support features. */
+	add_theme_support( 'automatic-feed-links' );
+	add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
+	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'title-tag' );
 }
 add_action( 'after_setup_theme', 'dz_setup' );
