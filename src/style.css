@@ -10,14 +10,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: demonszone
 */
 
+html {
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
 body {
-  background: #000000;
+  background: #F9F9F9;
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
 }
 a {
-  color: #669C34;
+  color: #E7F2D5;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 85%;
 }
 
 header.mast {
@@ -26,6 +36,53 @@ header.mast {
   height: 70px;
 }
 
+article.type-post {
+  width: 592px;
+}
+article.type-post h1 {
+  font-size: 4.0rem;
+  font-weight: 900;
+}
+article.type-post p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  line-height: 1.1;
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: 700;
+}
 .alignnone {
   margin: 5px 20px 20px 0;
 }
