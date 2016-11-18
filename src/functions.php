@@ -15,8 +15,8 @@ function dz_enqueue_scripts() {
 
 	wp_enqueue_script( 'dz', get_template_directory_uri() . "/dz{$is_min}.js", array(), DZ_VERSION, false );
 
-	wp_register_style( 'roboto', set_url_scheme( 'https://fonts.googleapis.com/css?family=Roboto:400,500,700,900', is_ssl() ), array() );
-	wp_enqueue_style( 'demonszone', get_stylesheet_uri(), array( 'roboto' ), DZ_VERSION );
+	wp_register_style( 'dz-fonts', set_url_scheme( 'https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Playfair+Display:400,700&subset=cyrillic,latin-ext', is_ssl() ), array() );
+	wp_enqueue_style( 'demonszone', get_stylesheet_uri(), array( 'dz-fonts' ), DZ_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'dz_enqueue_scripts' );
 
