@@ -1,13 +1,18 @@
 <?php
+defined( 'ABSPATH' ) or die();
 
 define( 'DZ_VERSION', '6.0.0-rev1' );
 define( 'DZ_DB_VERSION', '28af254' );
+define( 'DZ_REWRITE_VERSION', '1.0.1' );
 
 define( 'DZ_INC', get_stylesheet_directory() . '/inc' );
 
+/** Content Types */
+require_once( DZ_INC . '/post-types.php' );
+require_once( DZ_INC . '/taxonomies.php' );
+
 require_once( DZ_INC . '/development.php' );
 require_once( DZ_INC . '/embeds.php' );
-require_once( DZ_INC . '/post-types.php' );
 require_once( DZ_INC . '/shortcodes.php' );
 require_once( DZ_INC . '/template-tags.php' );
 
@@ -22,11 +27,12 @@ function dz_enqueue_scripts() {
 add_action( 'wp_enqueue_scripts', 'dz_enqueue_scripts' );
 
 function dz_maybe_upgrade() {
-	$current_version = get_option( 'demonszone_version', null );
+	/** Handle Post Types. */
+	dz_register_post_types();
+	dz_register_taxonomies();
 
-	if ( DZ_DB_VERSION !== $current_version ) {
-		global $wpdb;
-		update_option( 'demonszone_db_version', DZ_DB_VERSION );
+	if ( update_option( 'dz_rewrite_version', DZ_REWRITE_VERSION ) ) {
+		flush_rewrite_rules( false );
 	}
 }
 add_action( 'init', 'dz_maybe_upgrade' );
