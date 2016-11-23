@@ -5,7 +5,7 @@
 		<?php while ( have_posts() ) : the_post(); ?>
 			<article id="albums-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<header class="entry-header">
-					<?php the_title( '<h1 class="entry-title">Album Review: ', '</h1>' ); ?>
+					<?php the_title( '<h1 class="entry-title">Review: ', '</h1>' ); ?>
 				</header><!-- .entry-header -->
 
 				<?php twentysixteen_excerpt(); ?>
