@@ -23,7 +23,7 @@
 				</div><!-- .entry-content -->
 
 				<footer class="entry-footer">
-					<?php twentysixteen_entry_meta(); ?>
+					<?php dz_the_entry_meta(); ?>
 					<span class="artist-list"><?php the_terms( get_the_ID(), 'artist', 'Artist : ', ', ' ); ?></span>
 					<span class="genres-list"><?php the_terms( get_the_ID(), 'genres', 'Genres : ', ', ' ); ?></span>
 					<span class="labels-list"><?php the_terms( get_the_ID(), 'record_labels', 'Labels : ', ', ' ); ?></span>
