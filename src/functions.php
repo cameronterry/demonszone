@@ -5,17 +5,19 @@ define( 'DZ_VERSION', '6.0.0-rev1' );
 define( 'DZ_DB_VERSION', '28af254' );
 define( 'DZ_REWRITE_VERSION', '1.0.1' );
 
-define( 'DZ_INC', get_stylesheet_directory() . '/inc' );
+define( 'DZ_INC', get_stylesheet_directory() );
 
 /** Include the custom content types as well as custom fields. */
-require_once( DZ_INC . '/fields.php' );
-require_once( DZ_INC . '/post-types.php' );
-require_once( DZ_INC . '/taxonomies.php' );
+require_once( DZ_INC . '/inc/post-types.php' );
+require_once( DZ_INC . '/inc/taxonomies.php' );
 
-require_once( DZ_INC . '/development.php' );
-require_once( DZ_INC . '/embeds.php' );
-require_once( DZ_INC . '/shortcodes.php' );
-require_once( DZ_INC . '/template-tags.php' );
+require_once( DZ_INC . '/inc/development.php' );
+require_once( DZ_INC . '/inc/embeds.php' );
+require_once( DZ_INC . '/inc/shortcodes.php' );
+require_once( DZ_INC . '/inc/template-tags.php' );
+
+require_once( DZ_INC . '/admin/columns.php' );
+require_once( DZ_INC . '/admin/fields.php' );
 
 function dz_enqueue_scripts() {
 	$is_min = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min' );
