@@ -16,6 +16,8 @@ function dz_register_post_types() {
 		'search_items'        => __( 'Search Albums', 'demonszone' ),
 		'not_found'           => __( 'Not found', 'demonszone' ),
 		'not_found_in_trash'  => __( 'Not found in Trash', 'demonszone' ),
+		'view_item'           => __( 'View Album', 'demonszone' ),
+		'view_items'          => __( 'View Albums', 'demonszone' ),
 	);
 
 	$args = array(
