@@ -53,7 +53,7 @@ function dz_columns_contents_none( $title = '', $text = 'NONE' ) {
 	printf( '<strong style="color:#CC0000;" title="%2$s">%1$s</strong>', esc_html( $text ), esc_attr( $title ) );
 }
 
-function dz_pre_get_posts( $query ) {
+function dz_admin_pre_get_posts( $query ) {
 	if ( is_admin() && $query->is_main_query() && ( $orderby = $query->get( 'orderby' ) ) ) {
 		if ( 'dz_rating' === $orderby ) {
 			$query->set( 'meta_key', 'rating' );
@@ -67,4 +67,4 @@ function dz_pre_get_posts( $query ) {
 		$query->set( 'orderby', 'meta_value' );
 	}
 }
-add_action( 'pre_get_posts', 'dz_pre_get_posts' );
+add_action( 'pre_get_posts', 'dz_admin_pre_get_posts' );
