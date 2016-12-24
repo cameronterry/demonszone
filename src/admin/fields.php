@@ -109,8 +109,8 @@ if(function_exists("register_field_group"))
 				'name' => 'release_date',
 				'type' => 'date_picker',
 				'required' => 1,
-				'date_format' => 'yymmdd',
-				'display_format' => 'dd/mm/yy',
+				'return_format' => 'Ymd',
+                'display_format' => 'd/m/Y',
 				'first_day' => 1,
 			),
 			array (
