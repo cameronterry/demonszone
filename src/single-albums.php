@@ -22,6 +22,14 @@
 							get_template_part( 'template-parts/biography' );
 						}
 					?>
+					<h2>Track Listing :</h2>
+					<?php if ( have_rows( 'tracklisting' ) ) : ?>
+						<ol class="tracklisting">
+							<?php while ( have_rows( 'tracklisting' ) ) : the_row(); ?>
+								<li><?php the_sub_field( 'song_name' ); ?></li>
+							<?php endwhile; ?>
+						</ol>
+					<?php endif; ?>
 				</div><!-- .entry-content -->
 
 				<footer class="entry-footer">
