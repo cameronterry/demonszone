@@ -6,7 +6,7 @@
             "display_format": "d\/m\/Y",
             "return_format": "Ymd",
             "first_day": 1,
-            "key": "field_5848646615d42",
+            "key": "field_533fb43d8f055",
             "label": "Release Date",
             "name": "release_date",
             "type": "date_picker",
@@ -27,7 +27,7 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "key": "field_5848649e15d43",
+            "key": "field_533fbe37b91f0",
             "label": "Rating",
             "name": "rating",
             "type": "number",
@@ -77,5 +77,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1482663920
+    "modified": 1482669362
 }
