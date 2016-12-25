@@ -14,7 +14,9 @@
 
 				<div class="entry-content">
 					<?php
+
 						the_content();
+						dz_purchase_the_links();
 
 						if ( '' !== get_the_author_meta( 'description' ) ) {
 							get_template_part( 'template-parts/biography' );
@@ -27,6 +29,7 @@
 					<span class="artist-list"><?php the_terms( get_the_ID(), 'artist', 'Artist : ', ', ' ); ?></span>
 					<span class="genres-list"><?php the_terms( get_the_ID(), 'genres', 'Genres : ', ', ' ); ?></span>
 					<span class="labels-list"><?php the_terms( get_the_ID(), 'record_labels', 'Labels : ', ', ' ); ?></span>
+					<span class="labels-list"><?php dz_purchase_the_links(); ?></span>
 					<?php
 						edit_post_link(
 							sprintf(

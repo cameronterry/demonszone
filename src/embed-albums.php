@@ -34,9 +34,7 @@
 						<?php echo( wp_trim_words( get_the_excerpt(), 40, '...' ) ); ?>
 						<a href="<?php the_permalink(); ?>?utm_source=oembed&amp;utm_medium=cpc" style="font-style:italic;">Click here to read the full review.</a>
 					</p>
-					<p style="font-weight:bold;">
-						Buy Now : <a href="#">Amazon UK</a>
-					</p>
+					<?php dz_purchase_the_links(); ?>
 				</div>
 
 				<div class="wp-embed-footer">
