@@ -6,7 +6,7 @@ function dz_pre_get_posts( $query ) {
 		return;
 	}
 
-	if ( is_post_type_archive( 'albums' ) ) {
+	if ( is_post_type_archive( 'albums' ) || $query->is_tax( 'genres' ) ) {
 		$query->set( 'posts_per_page', 15 );
 	}
 }
