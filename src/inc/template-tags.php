@@ -1,11 +1,17 @@
 <?php
 
-function dz_the_entry_meta() {
-	printf( '<span class="byline"><span class="author vcard"><span class="screen-reader-text">%1$s </span> <a class="url fn n" href="%2$s">%3$s</a></span></span>',
-		_x( 'Author', 'Used before post author name.', 'twentysixteen' ),
-		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-		get_the_author()
-	);
+function dz_get_gigs( $count ) {
+	return new WP_Query( array(
+		'post_type' => 'gigs',
+		'posts_per_page' => $count
+	) );
+}
+
+function dz_get_posts( $slug, $count ) {
+	return new WP_Query( array(
+		'category_name' => $slug,
+		'posts_per_page' => $count
+	) );
 }
 
 function dz_purchase_get_format() {
