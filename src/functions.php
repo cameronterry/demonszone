@@ -42,5 +42,6 @@ add_action( 'init', 'dz_maybe_upgrade' );
 function dz_setup() {
 	/** Set the various image sizes. */
 	add_image_size( 'dz-square-medium', 400, 400, true );
+	add_image_size( 'dz-rectangle-medium', 400, 225, true );
 }
 add_action( 'after_setup_theme', 'dz_setup' );
