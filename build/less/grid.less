@@ -2,11 +2,7 @@
 
 div.grid-area {
 	.cell {
-		float:left;
-		margin:0;
-		padding:10px;
-		position:relative;
-		width:400px;
+		margin:0 7.6923% 1.5em 7.6923%;
 
 		a {
 			display:block;
@@ -20,11 +16,13 @@ div.grid-area {
 				position:absolute;
 				text-align:left;
 				top:0px;
+				z-index:100;
 			}
 
 			img {
 				margin:0 auto;
 				max-width:100%;
+				width:100%;
 			}
 
 			div.rating {
@@ -45,40 +43,51 @@ div.grid-area {
 	}
 
 	.cell.type-albums {
-		padding:20px 10px 10px 10px;
+		padding-top:20px;
 
 		a {
 			h2 {
 				font-size:1.3rem;
 			}
-
-			img {
-				height:400px;
-			}
 		}
 	}
 
 	.cell.type-gigs {
-		padding:40px 10px 10px 10px;
-
-		a {
-			img {
-				height:225px;
-			}
-		}
+		padding-top:40px;
 	}
 
 	.cell.type-post {
-		padding:20px 10px 10px 10px;
+		padding-top:20px;
 
 		a {
 			h2 {
 				font-size:1.1rem;
 			}
+		}
+	}
+}
 
-			img {
-				height:225px;
+@media @desktop {
+	div.grid-area {
+		.cell {
+			float:left;
+			margin:0;
+			padding:10px;
+			position:relative;
+
+			a:hover {
+				img {
+					opacity: 0.85;
+				}
 			}
+		}
+
+		.cell.type-albums {
+			width:25%;
+		}
+
+		.cell.type-post {
+			width:18.2em;
 		}
 	}
 }
