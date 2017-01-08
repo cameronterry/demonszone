@@ -15,14 +15,14 @@
 				?>
 
 				<p class="wp-embed-heading">
-					<a href="<?php the_permalink(); ?>?utm_source=oembed&amp;utm_medium=cpc" target="_top">
+					<a href="<?php the_permalink(); ?>?utm_source=embed" target="_top">
 						Review : <?php the_title(); ?>
 					</a>
 				</p>
 
 				<?php if ( $thumbnail_id ) : ?>
 					<div class="wp-embed-featured-image square">
-						<a href="<?php the_permalink(); ?>?utm_source=oembed&amp;utm_medium=cpc" target="_top">
+						<a href="<?php the_permalink(); ?>?utm_source=embed" target="_top">
 							<?php echo wp_get_attachment_image( $thumbnail_id, $image_size ); ?>
 						</a>
 					</div>
@@ -32,13 +32,13 @@
 					<p style="font-weight:bold;"><?php the_terms( get_the_ID(), 'artist', 'Artist : ', ', ' ); ?></p>
 					<p>
 						<?php echo( wp_trim_words( get_the_excerpt(), 40, '...' ) ); ?>
-						<a href="<?php the_permalink(); ?>?utm_source=oembed&amp;utm_medium=cpc" style="font-style:italic;">Click here to read the full review.</a>
+						<a href="<?php the_permalink(); ?>?utm_source=embed" style="font-style:italic;">Click here to read the full review.</a>
 					</p>
 					<?php dz_purchase_the_links(); ?>
 				</div>
 
 				<div class="wp-embed-footer">
-					<?php the_embed_site_title() ?>
+					<?php dz_the_embed_site_title() ?>
 
 					<div class="wp-embed-meta">
 						Rating : <?php dz_the_rating(); ?>
