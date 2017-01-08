@@ -26,7 +26,14 @@ function dz_enqueue_scripts() {
 	wp_register_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,700,900&subset=latin,cyrillic,latin-ext,cyrillic-ext', null, null );
 	wp_enqueue_style( 'demonszone', get_template_directory_uri() . '/style.css', array( 'roboto' ), DZ_VERSION );
 
-	wp_enqueue_script( 'demonszone', get_stylesheet_directory_uri() . '/dz.js', array( 'jquery' ), DZ_VERSION );
+	$deps = array( 'jquery' );
+
+	if ( false === is_admin_bar_showing() ) {
+		$deps = null;
+		wp_deregister_script( 'jquery' );
+	}
+
+	wp_enqueue_script( 'demonszone', get_stylesheet_directory_uri() . "/dz{$is_min}.js", $deps, DZ_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'dz_enqueue_scripts' );
 

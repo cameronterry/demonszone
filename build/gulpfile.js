@@ -19,7 +19,7 @@ gulp.task( 'less', function ( callback ) {
 
 gulp.task( 'javascript', function ( callback ) {
 	pump( [
-		gulp.src( ['javascript/dz.js'/*, 'javascript/zepto.js'*/] ),
+		gulp.src( ['javascript/zepto.js', 'javascript/unveil.js', 'javascript/dz.js'] ),
 		concat( 'dz.js' ),
 		gulp.dest( '../src/' ),
 		uglify( {
