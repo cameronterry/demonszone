@@ -1,4 +1,4 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'cell' ); ?>>
+<article id="post-<?php the_ID(); ?>" <?php dz_post_class( 'cell' ); ?>>
 	<a href="<?php the_permalink(); ?>">
 		<h2 class="site"><?php the_title(); ?></h2>
 		<?php if ( has_post_thumbnail() ) : ?>
