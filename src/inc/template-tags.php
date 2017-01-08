@@ -14,6 +14,20 @@ function dz_get_posts( $slug, $count ) {
 	) );
 }
 
+function dz_post_class( $class = '', $post_id = null ) {
+	$post = get_post( $post_id );
+	$classes = array( $class, 'hentry' );
+
+	$classes[] = 'post-' . $post->ID;
+	$classes[] = 'type-' . $post->post_type;
+
+	if ( current_theme_supports( 'post-thumbnails' ) && has_post_thumbnail( $post->ID ) ) {
+		$classes[] = 'has-post-thumbnail';
+	}
+
+	printf( 'class="%1$s"', join( ' ', $classes ) );
+}
+
 function dz_purchase_get_format() {
 	$formats = get_sub_field_object( 'format' );
 	$formats = $formats['choices'];
