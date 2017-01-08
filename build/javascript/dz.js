@@ -18,6 +18,8 @@
 
 	$( function () {
 		dz.posts.standardise_height();
+		$( 'img' ).unveil( 200 );
+
 		$( document ).on( 'resize', 'dz.posts.standardise_height' );
 	} );
 
