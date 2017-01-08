@@ -6,7 +6,11 @@ div.grid-area {
 
 		a {
 			display:block;
+			height:0;
+			padding:62.5% 0 0 0;
+			position:relative;
 			text-align:center;
+			width:100%;
 
 			h2 {
 				left:0px;
@@ -20,9 +24,9 @@ div.grid-area {
 			}
 
 			img {
-				margin:0 auto;
-				max-width:100%;
-				width:100%;
+				left:0;
+				position:absolute;
+				top:20px;
 			}
 
 			div.rating {
@@ -46,20 +50,24 @@ div.grid-area {
 		padding-top:20px;
 
 		a {
+			padding:100% 0 0 0;
+
 			h2 {
 				font-size:1.3rem;
+			}
+
+			img {
+				top:0;
 			}
 		}
 	}
 
-	.cell.type-gigs {
-		padding-top:40px;
-	}
-
-	.cell.type-post {
+	.cell.type-post, .cell.type-gigs {
 		padding-top:20px;
 
 		a {
+			padding:62.5% 0 0 0;
+
 			h2 {
 				font-size:1.1rem;
 			}
