@@ -10,7 +10,7 @@
 			<?php endwhile; ?>
 		</main>
 
-		<?php $section_posts = dz_get_posts( 'tour-dates', 12 ); ?>
+		<?php $section_posts = dz_get_posts_by_cat( 'tour-dates', 12 ); ?>
 		<main class="site-main clear">
 			<header class="page-header">
 				<h2 class="page-title">News - <?php dz_the_cat_name( 'tour-dates' ); ?> :</h2>
@@ -21,7 +21,7 @@
 			<?php endwhile; ?>
 		</main>
 
-		<?php $section_posts = dz_get_gigs( 9 ); ?>
+		<?php $section_posts = dz_get_gigs( 8 ); ?>
 		<main class="site-main clear">
 			<header class="page-header">
 				<h2 class="page-title">
@@ -34,7 +34,7 @@
 			<?php endwhile; ?>
 		</main>
 
-		<?php $section_posts = dz_get_posts( 'releases', 8 ); ?>
+		<?php $section_posts = dz_get_posts_by_cat( 'releases', 8 ); ?>
 		<main class="site-main clear">
 			<header class="page-header">
 				<h2 class="page-title">News - <?php dz_the_cat_name( 'releases' ); ?> :</h2>
