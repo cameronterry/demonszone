@@ -1,4 +1,5 @@
 <?php
+defined( 'ABSPATH' ) or die();
 
 function dz_get_gigs( $count ) {
 	return new WP_Query( array(

@@ -1,4 +1,5 @@
 <?php
+defined( 'ABSPATH' ) or die();
 
 function dz_columns_headers( $defaults ) {
 	return array_merge( $defaults, array(

@@ -1,4 +1,5 @@
 <?php
+defined( 'ABSPATH' ) or die();
 
 function dz_lazy_load_attr( $attr, $attachment, $size ) {
 	if ( false === is_embed() && false === is_admin() && false === array_key_exists( 'data-src', $attr ) ) {

@@ -1,4 +1,5 @@
 <?php
+defined( 'ABSPATH' ) or die();
 
 function dz_image_wp_get_attachment_url( $url, $post_id ) {
 	$url_parts = parse_url( $url );
