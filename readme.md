@@ -15,6 +15,7 @@ The following is a list of software tools used in the creation of DemonsZone.
 * [Advanced Custom Fields](https://www.advancedcustomfields.com/)
 * [Atom](https://atom.io/)
 * [Calculate Aspect Ratio](http://calculateaspectratio.com/)
+* [De'Longhi ESAM 3000](http://www.delonghi.com/en-gb/products/coffee/coffee-makers/automatic-coffee-makers/esam-3000b-0132212125)
 * [Google Chrome](https://www.google.com/chrome/)
 * [Google Tag Manager](https://www.google.com/analytics/tag-manager/)
 * [Gulp](http://gulpjs.com/)
