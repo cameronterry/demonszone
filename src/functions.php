@@ -15,6 +15,7 @@ require_once( DZ_INC . '/inc/development.php' );
 require_once( DZ_INC . '/inc/embeds.php' );
 require_once( DZ_INC . '/inc/lazy-load.php' );
 require_once( DZ_INC . '/inc/pre-get-posts.php' );
+require_once( DZ_INC . '/inc/queries.php' );
 require_once( DZ_INC . '/inc/shortcodes.php' );
 require_once( DZ_INC . '/inc/template-tags.php' );
 
