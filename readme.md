@@ -29,11 +29,10 @@ The following is a list of software tools used in the creation of DemonsZone.
 * [WordPress](https://wordpress.org/)
 * [Unveil.js](http://luis-almeida.github.io/unveil/)
 * [Zepto.js](http://zeptojs.com/)
-* []()
-* []()
 
 ## Tutorials
 
 The following are a collection of tutorials used in the creation of DemonsZone.
 
+* [Advanced Custom Fields - How-To - Order posts by custom fields](https://www.advancedcustomfields.com/resources/orde-posts-by-custom-fields/)
 * [SitePoint - How to Maintain Image Aspect Ratios in Responsive Web Design](https://www.sitepoint.com/maintain-image-aspect-ratios-responsive-web-design/)
