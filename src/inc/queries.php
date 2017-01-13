@@ -1,7 +1,42 @@
 <?php
 defined( 'ABSPATH' ) or die();
 
-function dz_get_albums_by_rating( $rating, $count, $order_by_rating = false, $page = 1 ) {
+/**
+ * Retrieves a collection of albums by a specific artist. Unlike other Albums
+ * query functions, this will return all albums unless a count is specified.
+ */
+function dz_get_albums_by_artist( $artist, $count = null, $order_by_rating = false ) {
+	$args = array(
+		'meta_key' => 'rating',
+		'meta_value' => $rating,
+		'orderby'  => array(),
+		'posts_per_page' => -1,
+		'post_type' => 'albums',
+		'tax_query' => array(
+			array(
+				'field' => 'term_id',
+				'taxonomy' => 'artist',
+				'terms' => array( $artist )
+			)
+		)
+	);
+
+	/** Override the number of posts if provided. */
+	if ( false === empty( $count ) ) {
+		$args['posts_per_page'] = $count;
+	}
+
+	/** If we are to Order by the album's rating as well as Post Date. */
+	if ( $order_by_rating ) {
+		$args['orderby']['meta_value_num'] = 'DESC';
+	}
+
+	$args['orderby']['post_date'] = 'DESC';
+
+	return dz_return_wp_query( $args );
+}
+
+function dz_get_albums_by_rating( $rating, $count, $order_by_rating = false ) {
 	$args = array(
 		'orderby'  => array(),
 		'post_type' => 'albums',
