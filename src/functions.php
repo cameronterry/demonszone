@@ -54,6 +54,7 @@ function dz_setup() {
 	/** Set the various image sizes. */
 	add_image_size( 'dz-square-medium', 400, 400, true );
 	add_image_size( 'dz-rectangle-medium', 400, 225, true );
+	add_image_size( 'dz-rectangle-small', 240, 135, true );
 
 	/**
 	 * Remove emoji which is not required for DemonsZone. It will also reduce
