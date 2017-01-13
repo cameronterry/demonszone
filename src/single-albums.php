@@ -51,6 +51,10 @@
 					?>
 				</footer><!-- .entry-footer -->
 			</article><!-- #post-## -->
+
+			<?php if ( comments_open() || get_comments_number() ) {
+				comments_template();
+			} ?>
 		<?php endwhile;?>
 	</main><!-- .site-main -->
 
