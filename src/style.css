@@ -1,12 +1,123 @@
 /*
 Theme Name: DemonsZone
 Theme URI: http://demonszone.com
+Description: DemonsZone.
 Author: Cameron Terry
 Author URI: https://cameronterry.supernovawp.com/
 Template: twentysixteen
-Description: DemonsZone.
 Version: 6.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: demonszone
 */
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: 'Roboto', sans-serif;
+}
+
+article.type-albums .post-thumbnail {
+  text-align: center;
+}
+article.type-albums .post-thumbnail img.wp-post-image {
+  display: inline-block;
+}
+article.type-albums .entry-footer .artist-list,
+article.type-albums .entry-footer .genres-list,
+article.type-albums .entry-footer .labels-list {
+  display: block;
+  margin-bottom: 0.5384615385em;
+}
+
+div.grid-area .cell {
+  margin: 0 7.6923% 1.5em 7.6923%;
+}
+div.grid-area .cell a {
+  display: block;
+  height: 0;
+  padding: 62.5% 0 0 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+div.grid-area .cell a h2 {
+  left: 0px;
+  line-height: 1.0em;
+  margin: 0;
+  padding: 7px;
+  position: absolute;
+  text-align: left;
+  top: 0px;
+  z-index: 100;
+}
+div.grid-area .cell a img {
+  left: 0;
+  max-height: 300px;
+  position: absolute;
+  top: 20px;
+}
+div.grid-area .cell a div.rating {
+  bottom: 0px;
+  font-size: 2.0rem;
+  margin: 0;
+  padding: 3px 10px;
+  position: absolute;
+  right: 0px;
+}
+div.grid-area .cell a div.rating .ten {
+  color: #DAA520;
+  font-family: dashicons;
+  margin-left: 0.2em;
+}
+div.grid-area .cell.type-albums {
+  padding-top: 20px;
+}
+div.grid-area .cell.type-albums a {
+  padding: 100% 0 0 0;
+}
+div.grid-area .cell.type-albums a h2 {
+  font-size: 1.3rem;
+}
+div.grid-area .cell.type-albums a img {
+  top: 0;
+}
+div.grid-area .cell.type-post,
+div.grid-area .cell.type-gigs {
+  padding-top: 20px;
+}
+div.grid-area .cell.type-post a,
+div.grid-area .cell.type-gigs a {
+  padding: 62.5% 0 0 0;
+}
+div.grid-area .cell.type-post a h2,
+div.grid-area .cell.type-gigs a h2 {
+  font-size: 1.1rem;
+}
+@media screen and (min-width: 61.5625em) {
+  div.grid-area .cell {
+    float: left;
+    margin: 0;
+    padding: 10px;
+    position: relative;
+    width: 25%;
+  }
+  div.grid-area .cell a:hover img {
+    opacity: 0.85;
+  }
+}
+
+.home .page-header {
+  margin: 0 7.6923% 1.00em;
+}
+.home .site-main {
+  margin-bottom: 2.0em;
+}
+@media screen and (min-width: 61.5625em) {
+  .home .page-header {
+    margin: 0 0 3.5em 0;
+  }
+}
+
