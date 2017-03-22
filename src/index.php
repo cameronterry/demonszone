@@ -10,10 +10,10 @@
 			<?php endwhile; ?>
 		</main>
 
-		<?php $section_posts = dz_get_albums_by_rating( 10, 8 ); ?>
+		<?php $section_posts = dz_get_albums( 8 ); ?>
 		<main class="site-main clear">
 			<header class="page-header">
-				<h2 class="page-title">10 / 10 :</h2>
+				<h2 class="page-title">Latest Reviews :</h2>
 			</header><!-- .page-header -->
 
 			<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
@@ -25,6 +25,17 @@
 		<main class="site-main clear">
 			<header class="page-header">
 				<h2 class="page-title">News - <?php dz_the_cat_name( 'tour-dates' ); ?> :</h2>
+			</header><!-- .page-header -->
+
+			<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
+				<?php get_template_part( 'template-parts/cell', 'post' ); ?>
+			<?php endwhile; ?>
+		</main>
+
+		<?php $section_posts = dz_get_posts_by_cat( 'releases', 8 ); ?>
+		<main class="site-main clear">
+			<header class="page-header">
+				<h2 class="page-title">News - <?php dz_the_cat_name( 'releases' ); ?> :</h2>
 			</header><!-- .page-header -->
 
 			<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
@@ -45,14 +56,25 @@
 			<?php endwhile; ?>
 		</main>
 
-		<?php $section_posts = dz_get_posts_by_cat( 'releases', 8 ); ?>
+		<?php $section_posts = dz_get_posts_by_cat( 'videos', 8 ); ?>
 		<main class="site-main clear">
 			<header class="page-header">
-				<h2 class="page-title">News - <?php dz_the_cat_name( 'releases' ); ?> :</h2>
+				<h2 class="page-title">News - <?php dz_the_cat_name( 'videos' ); ?> :</h2>
 			</header><!-- .page-header -->
 
 			<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
 				<?php get_template_part( 'template-parts/cell', 'post' ); ?>
+			<?php endwhile; ?>
+		</main>
+
+		<?php $section_posts = dz_get_albums_by_rating( 10, 8 ); ?>
+		<main class="site-main clear">
+			<header class="page-header">
+				<h2 class="page-title">10 / 10 :</h2>
+			</header><!-- .page-header -->
+
+			<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
+				<?php get_template_part( 'template-parts/cell', 'albums' ); ?>
 			<?php endwhile; ?>
 		</main>
 	</div>
