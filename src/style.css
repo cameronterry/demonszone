@@ -72,6 +72,9 @@ div.grid-area .cell a div.rating .ten {
   font-family: dashicons;
   margin-left: 0.2em;
 }
+div.grid-area .cell a:visited h2 {
+  color: #C1C1C1;
+}
 div.grid-area .cell.type-albums {
   padding-top: 20px;
 }
