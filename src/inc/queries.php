@@ -1,6 +1,17 @@
 <?php
 defined( 'ABSPATH' ) or die();
 
+function dz_get_albums( $count = 10 ) {
+	$args = array(
+		'meta_key' => 'rating',
+		'meta_value' => $rating,
+		'posts_per_page' => $count,
+		'post_type' => 'albums'
+	);
+
+	return dz_return_wp_query( $args );
+}
+
 /**
  * Retrieves a collection of albums by a specific artist. Unlike other Albums
  * query functions, this will return all albums unless a count is specified.
