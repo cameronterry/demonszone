@@ -51,7 +51,7 @@ div.grid-area .cell a h2 {
   position: absolute;
   text-align: left;
   top: 0px;
-  z-index: 100;
+  z-index: 10;
 }
 div.grid-area .cell a img {
   left: 0;
