@@ -73,10 +73,12 @@ function dz_the_rating() {
 }
 
 function dz_the_section_category( $taxonomy, $size, $prefix = 'News - ' ) {
-	$section_posts = dz_get_posts_by_cat( $taxonomy, $size ); ?>
+	$section_posts = dz_get_posts_by_cat( $taxonomy, $size );
+
+?>
 	<section class="site-main clear">
 		<header class="page-header">
-			<h2 class="page-title"><?php echo( $prefix ); dz_the_cat_name( 'tour-dates' ); ?> :</h2>
+			<h2 class="page-title"><?php echo( $prefix ); dz_the_cat_name( $taxonomy ); ?> :</h2>
 		</header><!-- .page-header -->
 
 		<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>

@@ -46,7 +46,7 @@
 
 		?>
 
-		<?php $section_posts = dz_get_albums_by_rating( 10, 8 ); ?>
+		<?php $section_posts = dz_get_albums_by_rating( 10, 16 ); ?>
 		<main class="site-main clear">
 			<header class="page-header">
 				<h2 class="page-title">10 / 10 :</h2>
