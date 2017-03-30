@@ -18,6 +18,7 @@ require_once( DZ_INC . '/inc/pre-get-posts.php' );
 require_once( DZ_INC . '/inc/queries.php' );
 require_once( DZ_INC . '/inc/shortcodes.php' );
 require_once( DZ_INC . '/inc/template-tags.php' );
+require_once( DZ_INC . '/inc/structured-data.php' );
 
 require_once( DZ_INC . '/admin/columns.php' );
 require_once( DZ_INC . '/admin/fields.php' );
