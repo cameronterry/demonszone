@@ -50,7 +50,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "key": "field_585fa81728062",
+                    "key": "field_573737373b26f",
                     "label": "Description",
                     "name": "description",
                     "type": "text",
@@ -77,7 +77,7 @@
                     "ajax": 0,
                     "placeholder": "",
                     "return_format": "value",
-                    "key": "field_585fa82b28063",
+                    "key": "field_5737377e3b270",
                     "label": "Store",
                     "name": "store",
                     "type": "select",
@@ -108,7 +108,7 @@
                     "ajax": 0,
                     "placeholder": "",
                     "return_format": "value",
-                    "key": "field_585fa86e28064",
+                    "key": "field_573739970c447",
                     "label": "Format",
                     "name": "format",
                     "type": "select",
@@ -124,7 +124,7 @@
                 {
                     "default_value": "",
                     "placeholder": "",
-                    "key": "field_585fa88b28065",
+                    "key": "field_57373b07c9ada",
                     "label": "URL",
                     "name": "url",
                     "type": "url",
@@ -174,5 +174,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1482669362
+    "modified": 1491512028
 }
