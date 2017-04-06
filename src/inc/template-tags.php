@@ -1,6 +1,23 @@
 <?php
 defined( 'ABSPATH' ) or die();
 
+function dz_album_release_date( $format = null ) {
+    $release = DateTime::createFromFormat( 'Ymd', get_field( 'release_date' ) );
+    echo( $release->format( null === $format ? get_option( 'date_format' ) : $format ) );
+}
+
+function dz_get_first_par() {
+    $str = wpautop( get_the_content() );
+    $str = substr( $str, 0, strpos( $str, '</p>' ) + 4 );
+    $str = strip_tags( $str, '<a><strong><em>' );
+
+    return $str;
+}
+
+function dz_the_first_par() {
+	echo( dz_get_first_par() );
+}
+
 function dz_post_class( $class = '', $post_id = null ) {
 	$post = get_post( $post_id );
 	$classes = array( $class, 'hentry' );
@@ -37,6 +54,10 @@ function dz_purchase_the_links() {
 	echo( '</p>' );
 }
 
+function dz_the_artist() {
+    dz_the_term( 'artist' );
+}
+
 function dz_the_cat_name( $slug ) {
 	$cat = get_category_by_slug( $slug );
 
@@ -70,4 +91,34 @@ function dz_the_entry_meta() {
 function dz_the_rating() {
 	$rating = intval( get_field( 'rating' ) );
 	printf( '%1$s / 10', $rating );
+}
+
+function dz_the_section_category( $taxonomy, $size, $prefix = 'News - ' ) {
+	$section_posts = dz_get_posts_by_cat( $taxonomy, $size );
+
+?>
+	<section class="site-main clear">
+		<header class="page-header">
+			<h2 class="page-title"><?php echo( $prefix ); dz_the_cat_name( $taxonomy ); ?> :</h2>
+		</header><!-- .page-header -->
+
+		<?php while ( $section_posts->have_posts() ) : $section_posts->the_post(); ?>
+			<?php get_template_part( 'template-parts/cell', 'post' ); ?>
+		<?php endwhile; ?>
+	</section>
+<?php }
+
+function dz_the_term( $taxonomy = 'category', $pattern = null ) {
+    $terms = get_the_terms( get_the_ID(), $taxonomy );
+
+    if ( false === empty( $terms ) ) {
+        $term = current( $terms );
+
+        if ( empty( $pattern ) === false ) {
+            printf( '<a href="%2$s">%1$s</a>', $term->name, get_term_link( $term, $pattern ) );
+        }
+        else {
+            echo( $term->name );
+        }
+    }
 }
