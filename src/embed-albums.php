@@ -21,7 +21,7 @@
 				</p>
 
 				<?php if ( $thumbnail_id ) : ?>
-					<div class="wp-embed-featured-image square">
+					<div class="wp-embed-featured-image">
 						<a href="<?php the_permalink(); ?>?utm_source=embed" target="_top">
 							<?php echo wp_get_attachment_image( $thumbnail_id, $image_size ); ?>
 						</a>

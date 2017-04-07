@@ -38,8 +38,19 @@ article.type-albums .entry-footer .labels-list {
 .wp-embed.albums .wp-embed-excerpt .read-more {
   font-style: italic;
 }
+@media screen and (min-width: 37.45em) {
+  .wp-embed.albums .wp-embed-featured-image {
+    float: left;
+    max-width: 160px;
+    margin-right: 20px;
+  }
+}
 .wp-embed.albums .wp-embed-purchase-links {
   clear: both;
+  margin: 20px 0 0 0;
+}
+.wp-embed.albums .wp-embed-purchase-links .heading {
+  font-size: 16px;
 }
 
 div.grid-area .cell {
