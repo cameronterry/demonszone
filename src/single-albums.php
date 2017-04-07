@@ -17,7 +17,7 @@
 
 						the_content();
 
-						dz_purchase_the_links();
+						get_template_part( 'template-parts/purchase', 'links' );
 
 						if ( '' !== get_the_author_meta( 'description' ) ) {
 							get_template_part( 'template-parts/biography' );
