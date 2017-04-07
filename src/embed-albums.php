@@ -29,12 +29,15 @@
 				<?php endif; ?>
 
 				<div class="wp-embed-excerpt">
-					<p style="font-weight:bold;"><?php the_terms( get_the_ID(), 'artist', 'Artist : ', ', ' ); ?></p>
+					<p class="artist"><?php the_terms( get_the_ID(), 'artist', 'Artist : ', ', ' ); ?></p>
 					<p>
 						<?php echo( wp_trim_words( get_the_excerpt(), 40, '...' ) ); ?>
-						<a href="<?php the_permalink(); ?>?utm_source=embed" style="font-style:italic;">Click here to read the full review.</a>
+						<a href="<?php the_permalink(); ?>?utm_source=embed" class="read-more">Click here to read the full review.</a>
 					</p>
-					<?php dz_purchase_the_links(); ?>
+				</div>
+
+				<div class="wp-embed-purchase-links">
+					<?php get_template_part( 'template-parts/purchase', 'links' ); ?>
 				</div>
 
 				<div class="wp-embed-footer">
