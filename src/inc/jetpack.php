@@ -14,7 +14,7 @@ function dz_the_related_posts() {
  * https://jetpack.com/support/related-posts/customize-related-posts/#delete
  */
 function dz_jetpack_remove_relatedposts() {
-    if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
+    if ( class_exists( 'Jetpack_RelatedPosts' ) && is_singular( 'albums' ) ) {
         $jprp = Jetpack_RelatedPosts::init();
         $callback = array( $jprp, 'filter_add_target_to_dom' );
         remove_filter( 'the_content', $callback, 40 );
