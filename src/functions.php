@@ -42,6 +42,11 @@ function dz_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'dz_enqueue_scripts' );
 
+function dz_enqueue_embed_scripts() {
+	wp_enqueue_style( 'demonszone-embed', get_stylesheet_directory_uri() . "/embeds.css", null, DZ_VERSION );
+}
+add_action( 'enqueue_embed_scripts', 'dz_enqueue_embed_scripts' );
+
 function dz_maybe_upgrade() {
 	/** Handle Post Types. */
 	dz_register_post_types();
