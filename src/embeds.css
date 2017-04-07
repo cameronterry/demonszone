@@ -1,0 +1,22 @@
+/*
+Theme Name: DemonsZone
+Theme URI: http://demonszone.com
+Description: DemonsZone.
+Author: Cameron Terry
+Author URI: https://cameronterry.supernovawp.com/
+Template: twentysixteen
+Version: 6.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: demonszone
+*/
+
+.wp-embed.albums .wp-embed-excerpt .artist {
+  font-weight: bold;
+}
+.wp-embed.albums .wp-embed-excerpt .read-more {
+  font-style: italic;
+}
+.wp-embed.albums .wp-embed-purchase-links {
+  clear: both;
+}
