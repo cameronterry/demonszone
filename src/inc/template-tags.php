@@ -42,6 +42,16 @@ function dz_purchase_the_format() {
 	echo( dz_purchase_get_format() );
 }
 
+function dz_purchase_get_store() {
+	$stores = get_sub_field_object( 'store' );
+	$stores = $stores['choices'];
+	return $stores[get_sub_field( 'store' )];
+}
+
+function dz_purchase_the_store() {
+
+}
+
 function dz_purchase_the_links() {
 	echo( '<p style="font-weight:bold;">Buy Now : ' );
 
