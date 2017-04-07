@@ -14,6 +14,7 @@ require_once( DZ_INC . '/inc/taxonomies.php' );
 require_once( DZ_INC . '/inc/amp.php' );
 require_once( DZ_INC . '/inc/development.php' );
 require_once( DZ_INC . '/inc/embeds.php' );
+require_once( DZ_INC . '/inc/jetpack.php' );
 require_once( DZ_INC . '/inc/lazy-load.php' );
 require_once( DZ_INC . '/inc/pre-get-posts.php' );
 require_once( DZ_INC . '/inc/queries.php' );

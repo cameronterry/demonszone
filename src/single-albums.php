@@ -16,6 +16,7 @@
 					<?php
 
 						the_content();
+
 						dz_purchase_the_links();
 
 						if ( '' !== get_the_author_meta( 'description' ) ) {
@@ -30,6 +31,11 @@
 							<?php endwhile; ?>
 						</ol>
 					<?php endif; ?>
+					<?php
+
+						dz_the_related_posts();
+
+					?>
 				</div><!-- .entry-content -->
 
 				<footer class="entry-footer">
