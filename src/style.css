@@ -32,6 +32,16 @@ article.type-albums .entry-footer .labels-list {
   margin-bottom: 0.5384615385em;
 }
 
+.wp-embed.albums .wp-embed-excerpt .artist {
+  font-weight: bold;
+}
+.wp-embed.albums .wp-embed-excerpt .read-more {
+  font-style: italic;
+}
+.wp-embed.albums .wp-embed-purchase-links {
+  clear: both;
+}
+
 div.grid-area .cell {
   margin: 0 7.6923% 1.5em 7.6923%;
 }
