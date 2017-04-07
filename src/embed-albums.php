@@ -37,6 +37,7 @@
 				</div>
 
 				<div class="wp-embed-purchase-links">
+					<p class="heading">Buy now : </p>
 					<?php get_template_part( 'template-parts/purchase', 'links' ); ?>
 				</div>
 
