@@ -9,10 +9,26 @@ var gulp = require( 'gulp' ),
 var destination_path = '../src/';
 
 gulp.task( 'less', function ( callback ) {
+	/**
+	 * The main CSS output.
+	 */
 	pump( [
 		gulp.src( ['theme.css', 'less/*.less'] ),
 		less().on( 'error', util.log ),
 		concat( 'style.css' ),
+		gulp.dest( destination_path )
+	] );
+
+	/**
+	 * Embeds CSS output is handled differently and this is to ensure that the
+	 * CSS is much smaller. Because if you enabling people to embed your content
+	 * on another website, it is beneficial to reduce the overall embed size as
+	 * much as possible.
+	 */
+	pump( [
+		gulp.src( ['theme.css', 'less/embeds.less'] ),
+		less().on( 'error', util.log ),
+		concat( 'embeds.css' ),
 		gulp.dest( destination_path )
 	], callback );
 } );
