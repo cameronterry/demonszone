@@ -13,15 +13,16 @@
 				<?php twentysixteen_post_thumbnail(); ?>
 
 				<div class="entry-content">
+					<?php the_content(); ?>
+					<h2>Where to buy :</h2>
 					<?php
-
-						the_content();
 
 						get_template_part( 'template-parts/purchase', 'links' );
 
 						if ( '' !== get_the_author_meta( 'description' ) ) {
 							get_template_part( 'template-parts/biography' );
 						}
+
 					?>
 					<h2>Track Listing :</h2>
 					<?php if ( have_rows( 'tracklisting' ) ) : ?>

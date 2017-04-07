@@ -1,4 +1,3 @@
-<h2>Where to buy :</h2>
 <ul class="purchase-links">
 	<?php while ( have_rows( 'purchasing' ) ) : the_row(); ?>
 		<li>
