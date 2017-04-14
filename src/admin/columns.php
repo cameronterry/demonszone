@@ -15,6 +15,7 @@ function dz_post_row_actions( $actions, $post ) {
 
 	return $actions;
 }
+add_filter( 'post_row_actions', 'dz_post_row_actions', 10, 2 );
 
 /**
  * Custom Columns
