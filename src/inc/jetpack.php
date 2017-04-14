@@ -1,5 +1,9 @@
 <?php
 
+function dz_module_active( $module ) {
+	return class_exists( 'Jetpack' ) && method_exists( 'Jetpack', 'get_active_modules' ) && in_array( $module, Jetpack::get_active_modules() );
+}
+
 function dz_the_related_posts() {
 	if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
 	    echo do_shortcode( '[jetpack-related-posts]' );
