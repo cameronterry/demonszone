@@ -145,3 +145,7 @@ div.grid-area .cell.type-gigs a h2 {
   }
 }
 
+article.post .entry-content .fb-post {
+  background-color: #FFFFFF;
+}
+
