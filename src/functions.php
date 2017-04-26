@@ -29,7 +29,9 @@ function dz_enqueue_scripts() {
 	$is_min = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min' );
 
 	wp_register_style( 'roboto', 'https://fonts.googleapis.com/css?family=Roboto:400,700,900&subset=latin,cyrillic,latin-ext,cyrillic-ext', null, null );
-	wp_enqueue_style( 'demonszone', get_template_directory_uri() . '/style.css', array( 'roboto' ), DZ_VERSION );
+	wp_register_style( 'twentysixteen', get_template_directory_uri() . '/style.css', null, DZ_VERSION );
+	wp_register_style( 'demonszone', get_stylesheet_directory_uri() . '/style.css', array( 'roboto', 'twentysixteen' ), DZ_VERSION );
+	wp_enqueue_style( 'demonszone' );
 
 	$deps = array( 'jquery' );
 
