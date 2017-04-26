@@ -4,12 +4,6 @@ function dz_module_active( $module ) {
 	return class_exists( 'Jetpack' ) && method_exists( 'Jetpack', 'get_active_modules' ) && in_array( $module, Jetpack::get_active_modules() );
 }
 
-function dz_the_related_posts() {
-	if ( class_exists( 'Jetpack_RelatedPosts' ) ) {
-	    echo do_shortcode( '[jetpack-related-posts]' );
-	}
-}
-
 /**
  * Remove the default implementation of Related Posts from the bottom of the
  * content. It uses the_content and lacks the control of the layout we are
