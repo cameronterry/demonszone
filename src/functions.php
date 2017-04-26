@@ -1,7 +1,7 @@
 <?php
 defined( 'ABSPATH' ) or die();
 
-define( 'DZ_VERSION', '2017.0.3' );
+define( 'DZ_VERSION', '2017.0.4' );
 define( 'DZ_DB_VERSION', '28af254' );
 define( 'DZ_REWRITE_VERSION', '1.0.1' );
 

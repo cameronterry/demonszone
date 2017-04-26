@@ -25,6 +25,10 @@ article.type-albums .post-thumbnail {
 article.type-albums .post-thumbnail img.wp-post-image {
   display: inline-block;
 }
+article.type-albums .entry-content .rating {
+  font-size: 2.0em;
+  text-align: right;
+}
 article.type-albums .entry-footer .artist-list,
 article.type-albums .entry-footer .genres-list,
 article.type-albums .entry-footer .labels-list {
