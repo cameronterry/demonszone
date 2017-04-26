@@ -14,6 +14,9 @@
 
 				<div class="entry-content">
 					<?php the_content(); ?>
+
+					<p class="rating">Rating : <?php dz_the_rating() ?></p>
+
 					<h2>Where to buy :</h2>
 					<?php
 
