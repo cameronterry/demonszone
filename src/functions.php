@@ -40,8 +40,7 @@ function dz_telemetry_pixel() {
 		$data['title'] = urlencode( get_the_title() );
 	}
 
-	// $url = add_query_arg( $data, 'https://telemetry.projectdarkmatter.com/1x1.gif' );
-	$url = add_query_arg( $data, 'http://localhost:3001/collectors/1x1.gif' );
+	$url = add_query_arg( $data, 'https://telemetry.projectdarkmatter.com/1x1.gif' );
 ?>
     <script type="text/javascript">
         ( function () {
