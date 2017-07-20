@@ -40,7 +40,7 @@ function dz_telemetry_pixel() {
 		$data['title'] = urlencode( get_the_title() );
 	}
 
-	$url = add_query_arg( $data, 'https://telemetry.projectdarkmatter.com/1x1.gif' );
+	$url = add_query_arg( $data, esc_url( 'https://telemetry.projectdarkmatter.com/1x1.gif' ) );
 ?>
     <script type="text/javascript">
         ( function () {
@@ -63,7 +63,7 @@ function dz_telemetry_pixel() {
             extras.push( '_drt=' + ( timing.responseEnd - window.performance.timing.responseStart ) );
             // extras.push( '_tlt=' + ( window.performance.timing.loadEventEnd - window.performance.timing.navigationStart ) );
 
-            var url = '<?php echo( esc_url( $url ) ); ?>&';
+            var url = '<?php echo( $url ); ?>&';
             url += extras.join( '&' );
 
             var el = document.createElement( 'img' );
@@ -72,7 +72,7 @@ function dz_telemetry_pixel() {
         } )();
     </script>
     <noscript>
-        <img alt="" src="<?php echo( esc_url( $url . '&t=noscript' ) ); ?>" />
+        <img alt="" src="<?php echo( $url . '&t=noscript' ); ?>" />
     </noscript>
 <?php }
 add_action( 'body_open', 'dz_telemetry_pixel' );
