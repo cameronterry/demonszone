@@ -8,8 +8,8 @@ define( 'DZ_REWRITE_VERSION', '1.0.1' );
 define( 'DZ_INC', get_stylesheet_directory() );
 
 /** Include the custom content types as well as custom fields. */
-require_once( DZ_INC . '/inc/post-types.php' );
-require_once( DZ_INC . '/inc/taxonomies.php' );
+require_once( DZ_INC . '/inc/content/post-types.php' );
+require_once( DZ_INC . '/inc/content/taxonomies.php' );
 
 require_once( DZ_INC . '/inc/amp.php' );
 require_once( DZ_INC . '/inc/development.php' );
