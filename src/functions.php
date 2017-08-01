@@ -12,6 +12,8 @@ require_once( DZ_INC . '/inc/content/post-types.php' );
 require_once( DZ_INC . '/inc/content/taxonomies.php' );
 require_once( DZ_INC . '/inc/content/embeds.php' );
 
+require_once( DZ_INC . '/musicbrainz/index.php' );
+
 require_once( DZ_INC . '/inc/amp.php' );
 require_once( DZ_INC . '/inc/development.php' );
 require_once( DZ_INC . '/inc/jetpack.php' );
