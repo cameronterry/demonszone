@@ -12,6 +12,7 @@ require_once( DZ_INC . '/inc/content/post-types.php' );
 require_once( DZ_INC . '/inc/content/taxonomies.php' );
 require_once( DZ_INC . '/inc/content/embeds.php' );
 
+require_once( DZ_INC . '/admin/index.php' );
 require_once( DZ_INC . '/musicbrainz/index.php' );
 
 require_once( DZ_INC . '/inc/amp.php' );
@@ -24,9 +25,6 @@ require_once( DZ_INC . '/inc/shortcodes.php' );
 require_once( DZ_INC . '/inc/structured-data.php' );
 require_once( DZ_INC . '/inc/telemetry.php' );
 require_once( DZ_INC . '/inc/template-tags.php' );
-
-require_once( DZ_INC . '/admin/columns.php' );
-require_once( DZ_INC . '/admin/fields.php' );
 
 function dz_telemetry_pixel() {
     if ( defined( 'DISABLE_TELEMETRY' ) && DISABLE_TELEMETRY ) {

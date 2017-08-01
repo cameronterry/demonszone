@@ -35,7 +35,7 @@ function dz_mbz_get_artist_data( $mbid, $term_id ) {
                     $meta_key = 'wikipedia_url';
                 }
                 else if ( false !== stripos( $url->resource, 'spotify.com' ) ) {
-                    $meta_key = 'spotify';
+                    $meta_key = 'spotify_url';
                 }
                 else if ( false !== stripos( $url->resource, 'itunes.apple.com' ) ) {
                     $meta_key = 'itunes_url';
@@ -106,6 +106,10 @@ function dz_mbz_process_artists_data() {
             [
                 'key' => 'musicbrainz_complete',
                 'compare' => 'NOT EXISTS'
+            ],
+            [
+                'key' => 'musicbrainz_processed',
+                'value' => 'yes'
             ]
         ]
     ] );
