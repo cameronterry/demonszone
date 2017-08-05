@@ -64,12 +64,16 @@ function dz_mbz_find_artist_mbid( $artist_name ) {
         'limit' => 5
     ];
 
-    $response = wp_remote_get( add_query_arg( $args, $url ), [
+    $url = add_query_arg( $args, $url );
+
+    $response = wp_remote_get( $url, [
         'user-agent' => 'DemonsZone/2017.01.01 (https://demonszone.com)'
     ] );
 
     $httpcode = wp_remote_retrieve_response_code( $response );
     $artists = [];
+
+    error_log( sprintf( 'MBZ HTTP: %1$s response was "%2$s"', $url, $httpcode ), 0 );
 
     if ( 200 === $httpcode ) {
         $response = json_decode( wp_remote_retrieve_body( $response ) );
@@ -90,6 +94,9 @@ function dz_mbz_find_artist_mbid( $artist_name ) {
                     $artists[] = $record;
                 }
             }
+        }
+        else {
+            error_log( sprintf( 'MBZ HTTP: unexpected response; %1$s', print_r( $response, true ) ), 0 );
         }
     }
 
@@ -122,9 +129,12 @@ function dz_mbz_process_artists_data() {
         }
     }
 }
-add_action( 'dz_musicbrainz_cron', 'dz_mbz_process_artists_data' );
+// add_action( 'dz_musicbrainz_cron', 'dz_mbz_process_artists_data' );
 
 function dz_mbz_process_artists_mbids() {
+    /** This is to allow multiple passes during the development of this. */
+    $processed_val = ( defined( 'MBID_PROCESS_VALUE' ) ? MBID_PROCESS_VALUE : 'one' );
+
     $query = new WP_Term_Query( [
         'fields' => 'id=>name',
         'hide_empty' => false,
@@ -132,15 +142,20 @@ function dz_mbz_process_artists_mbids() {
         'taxonomy' => 'artist',
         'meta_query' => [
             [
-                'key' => 'musicbrainz_processed',
+                'key' => 'mbid',
                 'compare' => 'NOT EXISTS'
+            ],
+            [
+                'key' => 'musicbrainz_processed',
+                'value' => $processed_val,
+                'compare' => '!='
             ]
         ]
     ] );
 
     foreach ( $query->terms as $id => $name ) {
         $records = dz_mbz_find_artist_mbid( $name );
-        update_term_meta( $id, 'musicbrainz_processed', 'yes' );
+        update_term_meta( $id, 'musicbrainz_processed', $processed_val );
 
         if ( false === empty( $records ) ) {
             if ( 1 === count( $records ) ) {
