@@ -164,4 +164,6 @@ function dz_mbz_process_artists_mbids() {
         }
     }
 }
-add_action( 'dz_musicbrainz_cron', 'dz_mbz_process_artists_mbids' );
+if ( false === defined( 'DISABLE_MUSICBRAINZ' ) || false === DISABLE_MUSICBRAINZ ) {
+    add_action( 'dz_musicbrainz_cron', 'dz_mbz_process_artists_mbids' );
+}
