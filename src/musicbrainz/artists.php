@@ -87,7 +87,7 @@ function dz_mbz_find_artist_mbid( $artist_name ) {
                         'country' => $artist->country
                     ];
 
-                    if ( $artist->tags ) {
+                    if ( isset( $artist->tags ) ) {
                         $record['tags'] = wp_list_pluck( $artist->tags, 'name' );
                     }
 
