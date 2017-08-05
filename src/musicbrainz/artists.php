@@ -132,13 +132,10 @@ function dz_mbz_process_artists_data() {
 // add_action( 'dz_musicbrainz_cron', 'dz_mbz_process_artists_data' );
 
 function dz_mbz_process_artists_mbids() {
-    /** This is to allow multiple passes during the development of this. */
-    $processed_val = ( defined( 'MBID_PROCESS_VALUE' ) ? MBID_PROCESS_VALUE : 'one' );
-
     $query = new WP_Term_Query( [
         'fields' => 'id=>name',
         'hide_empty' => false,
-        'number' => 20,
+        'number' => 5,
         'taxonomy' => 'artist',
         'meta_query' => [
             [
@@ -147,22 +144,23 @@ function dz_mbz_process_artists_mbids() {
             ],
             [
                 'key' => 'musicbrainz_processed',
-                'value' => $processed_val,
-                'compare' => '!='
+                'compare' => 'NOT EXISTS'
             ]
         ]
     ] );
 
-    foreach ( $query->terms as $id => $name ) {
-        $records = dz_mbz_find_artist_mbid( $name );
-        update_term_meta( $id, 'musicbrainz_processed', $processed_val );
+    if ( false === empty( $query->terms ) ) {
+        foreach ( $query->terms as $id => $name ) {
+            $records = dz_mbz_find_artist_mbid( $name );
+            update_term_meta( $id, 'musicbrainz_processed', $processed_val );
 
-        if ( false === empty( $records ) ) {
-            if ( 1 === count( $records ) ) {
-                update_term_meta( $id, 'mbid', $records[0]['mbid'] );
+            if ( false === empty( $records ) ) {
+                if ( 1 === count( $records ) ) {
+                    update_term_meta( $id, 'mbid', $records[0]['mbid'] );
+                }
+
+                update_term_meta( $id, 'musicbrainz_artists', $records );
             }
-
-            update_term_meta( $id, 'musicbrainz_artists', $records );
         }
     }
 }
