@@ -152,7 +152,7 @@ function dz_mbz_process_artists_mbids() {
     if ( false === empty( $query->terms ) ) {
         foreach ( $query->terms as $id => $name ) {
             $records = dz_mbz_find_artist_mbid( $name );
-            update_term_meta( $id, 'musicbrainz_processed', $processed_val );
+            update_term_meta( $id, 'musicbrainz_processed', 'yes' );
 
             if ( false === empty( $records ) ) {
                 if ( 1 === count( $records ) ) {
