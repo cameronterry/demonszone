@@ -120,8 +120,8 @@ function dz_mbz_process_artists_data() {
                 'compare' => 'NOT EXISTS'
             ],
             [
-                'key' => 'musicbrainz_processed',
-                'value' => 'yes'
+                'key' => 'mbid',
+                'compare' => 'EXISTS'
             ]
         ]
     ] );
