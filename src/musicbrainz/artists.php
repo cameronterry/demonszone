@@ -10,6 +10,8 @@ function dz_mbz_get_artist_data( $mbid, $term_id ) {
 
     $httpcode = wp_remote_retrieve_response_code( $response );
 
+    error_log( sprintf( 'MBZ HTTP: %1$s response was "%2$s"', $url, $httpcode ), 0 );
+
     if ( 200 === $httpcode ) {
         $response = json_decode( wp_remote_retrieve_body( $response ) );
 
@@ -52,6 +54,9 @@ function dz_mbz_get_artist_data( $mbid, $term_id ) {
         }
 
         update_term_meta( $term_id, 'musicbrainz_complete', $complete );
+    }
+    else {
+        error_log( sprintf( 'MBZ HTTP: unexpected response; %1$s', print_r( $response, true ) ), 0 );
     }
 }
 
@@ -107,7 +112,7 @@ function dz_mbz_process_artists_data() {
     $query = new WP_Term_Query( [
         'fields' => 'id=>name',
         'hide_empty' => false,
-        'number' => 20,
+        'number' => 5,
         'taxonomy' => 'artist',
         'meta_query' => [
             [
@@ -129,7 +134,9 @@ function dz_mbz_process_artists_data() {
         }
     }
 }
-// add_action( 'dz_musicbrainz_cron', 'dz_mbz_process_artists_data' );
+if ( false === defined( 'DISABLE_MUSICBRAINZ' ) || false === DISABLE_MUSICBRAINZ ) {
+    add_action( 'dz_musicbrainz_cron', 'dz_mbz_process_artists_data' );
+}
 
 function dz_mbz_process_artists_mbids() {
     $query = new WP_Term_Query( [
