@@ -1,7 +1,7 @@
 <?php
 defined( 'ABSPATH' ) or die();
 
-function dz_mbz_get_artist_data( $mbid, $term_id ) {
+function dz_mbz_get_artist_data( $term_id, $mbid ) {
     $url = sprintf( 'https://musicbrainz.org/ws/2/artist/%1$s?inc=url-rels&fmt=json', $mbid );
 
     $response = wp_remote_get( $url, [
