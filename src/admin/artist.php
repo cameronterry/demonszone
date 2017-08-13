@@ -66,3 +66,19 @@ function dz_edited_artist_save( $term_id, $tag_id ) {
     }
 }
 add_action( 'edited_artist', 'dz_edited_artist_save', 10, 2 );
+
+function dz_mbz_artist_mbid_quick_edit( $column, $screen, $tax ) {
+    if ( 'edit-tags' === $screen && 'artist' === $tax && 'musicbrainz' === $column ) { ?>
+        <fieldset>
+            <div class="inline-edit-col">
+                <label>
+                    <span class="title">MBID</span>
+                    <span class="input-text-wrap">
+                        <input type="text" name="mbid" class="ptitle" value="" />
+                    </span>
+                </label>
+            </div>
+        </fieldset>
+    <?php }
+}
+add_action( 'quick_edit_custom_box', 'dz_mbz_artist_mbid_quick_edit', 10, 3 );
