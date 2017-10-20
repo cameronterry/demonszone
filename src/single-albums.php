@@ -35,11 +35,6 @@
 							<?php endwhile; ?>
 						</ol>
 					<?php endif; ?>
-					<?php
-
-						dz_the_related_posts();
-
-					?>
 				</div><!-- .entry-content -->
 
 				<footer class="entry-footer">

@@ -18,18 +18,6 @@ function dz_the_first_par() {
 	echo( dz_get_first_par() );
 }
 
-function dz_the_related_posts() { ?>
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-		<ins class="adsbygoogle"
-		     style="display:block"
-		     data-ad-format="autorelaxed"
-		     data-ad-client="ca-pub-1085868034675667"
-		     data-ad-slot="8611802378"></ins>
-	<script>
-		(adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
-<?php }
-
 function dz_post_class( $class = '', $post_id = null ) {
 	$post = get_post( $post_id );
 	$classes = array( $class, 'hentry' );
