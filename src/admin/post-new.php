@@ -15,7 +15,7 @@ function dz_auto_schedule_script() {
                 last_post_date.setTime( last_post_date.getTime() + (2 * 60 * 60 * 1000 ) );
 
                 $( '#aa' ).val( last_post_date.getFullYear() );
-                $( '#mm' ).val( ( '0' + last_post_date.getMonth() + 1 ).slice( -2 ) );
+                $( '#mm' ).val( ( '0' + ( last_post_date.getMonth() + 1 ) ).slice( -2 ) );
                 $( '#jj' ).val( last_post_date.getDate() );
                 $( '#hh' ).val( last_post_date.getHours() );
                 $( '#mn' ).val( last_post_date.getMinutes() );
