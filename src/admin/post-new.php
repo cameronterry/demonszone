@@ -1,6 +1,10 @@
 <?php
 
 function dz_auto_schedule_script() {
+    if ( 'post' !== get_post_type() ) {
+        return;
+    }
+
     global $wpdb;
 
     $date = $wpdb->get_var("SELECT post_date FROM $wpdb->posts WHERE post_status = 'future' AND post_type IN ('post') ORDER BY post_date_gmt DESC LIMIT 1");
