@@ -22,60 +22,7 @@ require_once( DZ_INC . '/inc/pre-get-posts.php' );
 require_once( DZ_INC . '/inc/queries.php' );
 require_once( DZ_INC . '/inc/shortcodes.php' );
 require_once( DZ_INC . '/inc/structured-data.php' );
-require_once( DZ_INC . '/inc/telemetry.php' );
 require_once( DZ_INC . '/inc/template-tags.php' );
-
-function dz_telemetry_pixel() {
-    if ( defined( 'DISABLE_TELEMETRY' ) && DISABLE_TELEMETRY ) {
-        return;
-    }
-
-	$data = array(
-		'action' => 'pv'
-	);
-
-	if ( is_singular() ) {
-		$data['ID'] = get_the_ID();
-		$data['post_type'] = get_post_type();
-		$data['title'] = urlencode( get_the_title() );
-	}
-
-	$url = add_query_arg( $data, esc_url( 'https://telemetry.projectdarkmatter.com/1x1.gif' ) );
-?>
-    <script type="text/javascript">
-        ( function () {
-            var first_paint = function() {
-                if ( window.chrome && window.chrome.loadTimes ) {
-                    return window.chrome.loadTimes().firstPaintTime * 1000;
-                }
-                else if ( 'number' === typeof( window.performance.timing.msFirstPaint ) ) {
-                    return window.performance.timing.msFirstPaint;
-                }
-            };
-
-            var performance = window.performance || window.webkitPerformance || window.msPerformance || window.mozPerformance;
-            var timing = performance.timing;
-
-            var extras = [];
-            extras.push( '_dlt=' + ( timing.domainLookupEnd - timing.domainLookupStart ) );
-            extras.push( '_ct=' + ( timing.connectEnd - timing.connectStart ) );
-            // extras.push( '_fpt=' + ( first_paint() + window.performance.timing.navigationStart ) );
-            extras.push( '_drt=' + ( timing.responseEnd - window.performance.timing.responseStart ) );
-            // extras.push( '_tlt=' + ( window.performance.timing.loadEventEnd - window.performance.timing.navigationStart ) );
-
-            var url = '<?php echo( $url ); ?>&';
-            url += extras.join( '&' );
-
-            var el = document.createElement( 'img' );
-            el.alt = ''; el.src = url;
-            document.body.insertBefore( el, document.body.childNodes[0] );
-        } )();
-    </script>
-    <noscript>
-        <img alt="" src="<?php echo( $url . '&t=noscript' ); ?>" />
-    </noscript>
-<?php }
-add_action( 'body_open', 'dz_telemetry_pixel' );
 
 function dz_enqueue_scripts() {
 	$is_min = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min' );
