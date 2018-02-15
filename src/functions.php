@@ -17,7 +17,6 @@ require_once( DZ_INC . '/musicbrainz/index.php' );
 
 require_once( DZ_INC . '/inc/development.php' );
 require_once( DZ_INC . '/inc/jetpack.php' );
-require_once( DZ_INC . '/inc/lazy-load.php' );
 require_once( DZ_INC . '/inc/pre-get-posts.php' );
 require_once( DZ_INC . '/inc/queries.php' );
 require_once( DZ_INC . '/inc/shortcodes.php' );
@@ -31,15 +30,6 @@ function dz_enqueue_scripts() {
 	wp_register_style( 'twentysixteen', get_template_directory_uri() . '/style.css', null, DZ_VERSION );
 	wp_register_style( 'demonszone', get_stylesheet_directory_uri() . '/style.css', array( 'roboto', 'twentysixteen' ), DZ_VERSION );
 	wp_enqueue_style( 'demonszone' );
-
-	$deps = array( 'jquery' );
-
-	if ( false === is_admin_bar_showing() ) {
-		$deps = null;
-		wp_deregister_script( 'jquery' );
-	}
-
-	wp_enqueue_script( 'demonszone', get_stylesheet_directory_uri() . "/dz{$is_min}.js", $deps, DZ_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'dz_enqueue_scripts' );
 
