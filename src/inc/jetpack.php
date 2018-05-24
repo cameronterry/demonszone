@@ -19,3 +19,8 @@ function dz_jetpack_remove_relatedposts() {
     }
 }
 add_filter( 'wp', 'dz_jetpack_remove_relatedposts', 20 );
+
+/**
+ * Make sure Jetpack adheres to visitors who have setup "Do Not Track".
+ */
+add_filter( 'jetpack_honor_dnt_header_for_stats', '__return_true' );
